@@ -32,11 +32,11 @@
 
 <div class="wrapper-sponsors">
     <div class="sponsors owl-carousel owl-theme" style="opacity: 1; display: block;">
-        
-        <div class="owl-wrapper-outer">
-		    <div class="owl-wrapper" style="left: 0px; display: block;
+
+		<div class="owl-wrapper-outer">
+			<div class="owl-wrapper" style="width: 6496px; left: 0px; display: block;
 			    transition: all 800ms ease 0s; transform: translate3d(-928px, 0px, 0px);">
-		        <div class="owl-item" style="width: 232px;">
+				<div class="owl-item" style="width: 232px;">
 		            <div class="spons-item">
                         <img src="<?php echo $main_name; ?>/img/friend_1.jpg">
                     </div>
