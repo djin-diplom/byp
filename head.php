@@ -34,7 +34,8 @@ if ($route) {//Переключатель заголовков
 	<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/screen-fix.css">
 	<!--[if IE]><script src="/js/html5shiv.js"></script><![endif]-->
 
-<script type="text/javascript" src="./hart1_files/jquery.plugin.min.js."></script>
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/classic-081711.css">
+
 
 
 
