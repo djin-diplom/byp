@@ -9,7 +9,7 @@
 			</ul>
 		</header>
 		<figure class="article__left article__photo">
-			<img src="<?php echo str_replace('news', 'pictures', $page['url']); ?>/img_1.jpg" width="100%" />
+			<img src="<?php echo str_replace('news', 'pictures', $page['url']); ?>/img_1.jpg" width="360" />
 		</figure>
 		<p class="lead"><?php echo $page['description']; ?></p>
                 <p><a target="_blank" href="<?php echo $page['url_ext']; ?>">/oo\</a></p>
