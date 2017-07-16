@@ -31,7 +31,7 @@
 	
 
 <div class="wrapper-sponsors">
-    <div class="sponsors owl-carousel owl-theme" style="opacity: 1; display: block;">
+    <div class="sponsors owl-carousel owl-theme" style="opacity: 1; ">
         
         <div class="owl-wrapper-outer">
 		    <div class="owl-wrapper" style="width: 6496px; left: 0px; display: block; 
