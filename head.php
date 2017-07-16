@@ -41,6 +41,31 @@ if ($route) {//Переключатель заголовков
 <link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/jquery.fancybox.css">
 <link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/print.css">
 
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/analytics.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/api.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/async-ads.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/ch15.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/common.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/cse.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/cycle.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/default+ru.I.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.cookie.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.cycle2.carousel.min.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.fancybox.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.plugin.min.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/jquery.timer.min.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/kb.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/new-script.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/openapi.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/owl.carousel.min.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/pluso-like.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/recaptcha__ru.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/s.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/sdk.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/watch.js"></script>
+
 
 
 <!-- Yandex.Metrika counter -->
