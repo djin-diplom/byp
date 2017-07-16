@@ -34,6 +34,15 @@ if ($route) {//Переключатель заголовков
 	<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/screen-fix.css">
 	<!--[if IE]><script src="/js/html5shiv.js"></script><![endif]-->
 
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/animation.css">
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/default.css">
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/default+ru.css">
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/fontello.css">
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/jquery.fancybox.css">
+<link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/print.css">
+
+
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
