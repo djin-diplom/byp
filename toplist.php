@@ -2,7 +2,7 @@
 			<div class="topnews__pic">
 			    <a href="<?php echo $main_name; ?><?php echo $topnews[0]['url']; ?>">
 				    <img src="<?php echo str_replace('news', 'pictures', $topnews[0]['url']); ?>/img_1.jpg" 
-					alt="<?php echo $toplist[0]['teme']; ?>" width="355" height="225" />
+					alt="<?php echo $toplist[0]['teme']; ?>" width="355"  />
 			    </a>
 			</div>
 			<span class="news__time"><?php echo $topnews[0]['datetime']; ?></span>
