@@ -35,7 +35,10 @@ if ($route) {//Переключатель заголовков
 	<!--[if IE]><script src="/js/html5shiv.js"></script><![endif]-->
 
 <link rel="stylesheet" media="screen" href="<?php echo $main_name; ?>/index_files/classic-081711.css">
-
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/mUjileCiCX-zdqBJO6mmFaJtiV4m78ixEoiEZmr9IDM.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/remote.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/watch.js"></script>
+<script type="text/javascript" src="<?php echo $main_name; ?>/index_files/www-embed-player.js"></script>
 
 
 
