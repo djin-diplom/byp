@@ -1,0 +1,15 @@
+User-Agent: *
+ 
+Disallow: /admin/
+ 
+Disallow: /pastnews/
+ 
+Disallow: /searchnews/
+ 
+Disallow: /topic/
+
+Disallow: /delete/
+  
+Host: bypolit.org
+ 
+Sitemap: http://bypolit.org/sitemap.xml
