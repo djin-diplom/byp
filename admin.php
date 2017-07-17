@@ -51,32 +51,54 @@ $teme_int = $_POST["teme_int"];
     exit;
     }
 	if($_FILES['filename_3']['size'] > 1024*1024)
-    {
-    echo ("Размер файла превышает 1 мегабайт");
-    exit;
-    }
+	{
+		echo ("Размер файла превышает 1 мегабайт");
+		exit;
+	}
+	if($_FILES['filename_4']['size'] > 1024*1024)
+	{
+		echo ("Размер файла превышает 1 мегабайт");
+		exit;
+	}
+	if($_FILES['filename_5']['size'] > 1024*1024)
+	{
+		echo ("Размер файла превышает 1 мегабайт");
+		exit;
+	}
 
     // Проверяем загружен ли файл
+	$url_mass = explode ( '/', $url);
+	if (!empty($url_mass[6])) $chpu_url ="/".$url_mass[6];
+	else $url_mass[6] = '';
+	$url_pic = "pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4]."/".$url_mass[5].$chpu_url;
     if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
     {
     // Если файл загружен успешно, перемещаем его
     // из временной директории в конечную
 	// Создаем папки
-	$url_mass = explode ( '/', $url);
-	if (!empty($url_mass[6])) $chpu_url ="/".$url_mass[6];
-	else $url_mass[6] = '';
 	@mkdir("pictures/".$url_mass[2], 0755);
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3], 0755);
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4], 0755);
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4]."/".$id, 0755);
-	$url_pic = "pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4]."/".$url_mass[5].$chpu_url;
 	@mkdir($url_pic, 0755);
     move_uploaded_file($_FILES["filename"]["tmp_name"], $url_pic."/img_1.jpg");
-	move_uploaded_file($_FILES["filename_2"]["tmp_name"], $url_pic."/img_2.jpg");
-	move_uploaded_file($_FILES["filename_3"]["tmp_name"], $url_pic."/img_3.jpg");
-	move_uploaded_file($_FILES["filename_4"]["tmp_name"], $url_pic."/img_4.jpg");
-	move_uploaded_file($_FILES["filename_5"]["tmp_name"], $url_pic."/img_5.jpg");
     }
+	if(is_uploaded_file($_FILES["filename_2"]["tmp_name"]))
+	{
+		move_uploaded_file($_FILES["filename_2"]["tmp_name"], $url_pic."/img_2.jpg");
+	}
+	if(is_uploaded_file($_FILES["filename_3"]["tmp_name"]))
+	{
+		move_uploaded_file($_FILES["filename_3"]["tmp_name"], $url_pic."/img_3.jpg");
+	}
+	if(is_uploaded_file($_FILES["filename_4"]["tmp_name"]))
+	{
+		move_uploaded_file($_FILES["filename_4"]["tmp_name"], $url_pic."/img_4.jpg");
+	}
+	if(is_uploaded_file($_FILES["filename_5"]["tmp_name"]))
+	{
+		move_uploaded_file($_FILES["filename_5"]["tmp_name"], $url_pic."/img_5.jpg");
+	}
 }
 ?>
 
