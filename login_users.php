@@ -8,7 +8,7 @@ if (!isset($_SESSION['pass'])) { // сессия пустая - значит э�
         $select_users = "SELECT * FROM $Name_database.$table_users WHERE login = '$login' ";
         $res_users = mysqli_query($link, $select_users);
         $row_users = mysqli_fetch_array($res_users);
-        if (empty($row_users[0])) {//такого логина еще нет, можно добавить его в базу данных.
+        if (empty($row_users[0])) {//такого логина еще нет, можно добавить его в базу данных и запомнить в сессии
             $аdm = 0;
             $url_avatar = '/pictures/avatars/'.$login;
             $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`, `аdm`, `url_avatar`) 

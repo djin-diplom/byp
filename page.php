@@ -53,23 +53,7 @@
 			</div>
 
 			<div class="comments__write">
-				<input type="hidden" name="c"    value="arcomm">
-				<input type="hidden" name="i" value="256251">
-				<input type="hidden" name="p"   value="1">
-				<input type="hidden" name="c2"   value="araddcom">
-				<input type="hidden" id="comment_ari"                      value="256251">
-				<input type="hidden" id="comment_cmi"                      value="0">
 
-				<div class="comments__input is-marked">
-				<i class="icon-comment"></i>
-					<label for="in_author">Имя</label>
-					<input type="text" name="login" id="in_author" maxlength="20">
-				</div>
-				<div class="comments__input">
-					<label for="in_email">Пароль</label>
-					<input type="password" name="pass" maxlength="20">
-					<span class="comments__info-text">Запомните пароль для последующей аунтификации</span>
-				</div>
 				<div class="comments__input">
 					<label for="in_comment">Комментарий</label>
 					<textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
@@ -86,12 +70,7 @@
 				</div>
 
 				<div class="comments__write">
-					<input type="hidden" name="c"    value="arcomm">
-					<input type="hidden" name="i" value="256251">
-					<input type="hidden" name="p"   value="1">
-					<input type="hidden" name="c2"   value="araddcom">
-					<input type="hidden" id="comment_ari"                      value="256251">
-					<input type="hidden" id="comment_cmi"                      value="0">
+
 
 					<div class="comments__input is-marked">
 						<i class="icon-comment"></i>
@@ -103,12 +82,7 @@
 						<input type="password" name="pass" maxlength="20">
 						<span class="comments__info-text">Запомните пароль для последующей аунтификации</span>
 					</div>
-					<div class="comments__input">
-						<label for="in_comment">Комментарий</label>
-						<textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
-						<button class="comments__submit" id="commentFormSubmit">Отправить</button>
-						<span class="comments__info-text"><b></b></span>
-					</div>
+					
 				</div>
 			</div>
 
