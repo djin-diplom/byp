@@ -11,8 +11,9 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
         if (empty($row_users[0])) {//такого логина еще нет, можно добавить его в базу данных и запомнить в сессии
             $аdm = 0;
             $url_avatar = '/pictures/avatars/'.$login;
-            $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`, `аdm`, `url_avatar`) 
-	VALUES ($login,'$pass',$аdm,'$url_avatar')";
+            $id_user = time();
+            $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`, `аdm`, `url_avatar`,`id_user`) 
+	VALUES ($login,'$pass',$аdm,'$url_avatar',$id_user)";
             $result_user = mysqli_query($link, $insert_com);
             if ($result_user == 'true'){
                 //echo "Информация занесена в базу данных";
