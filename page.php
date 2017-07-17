@@ -18,8 +18,12 @@
 <?php echo $page['url_frame']; ?>
 		<p><a target="_blank" href="<?php echo $main_name; ?><?php echo $page['url_int']; ?>"><?php echo $page['teme_int']; ?></a></p>
 
+
 <div class="comments" id="comments" style="text-align: left;">
-	<div class="comments__head">Комментарии <span class="news__counter">1</span></div>
+	<div class="comments__head">Комментарии <span class="news__counter"><?php echo $total_comments; ?></span></div>
+
+
+	  <?php  for ($k=0, $k < $total_comments, $k++): ?>
 		<div class="comments__container" style="overflow-wrap: break-word; word-wrap: break-word; word-break: normal; line-break: auto; hyphens: manual;">
 			<div class="comment  commentContainer " >
 			         <div class="comment__info">
@@ -34,17 +38,12 @@
 			<p class="comment__content">Люблю Белоруссию!</p>
 			<a class="comment__answer-btn replyLink" href="#replycomment-7854145">Ответить</a>
 		        </div>
-	        </div>
-		<div id="endcomments" style="margin: 0 0 30px 0;">&nbsp;</div>
-		<div class="addedCommentPlaceholder" id="addedCommentPlaceholder" style="display:none;">
-			<h3>Ваш комментарий добавлен и появится здесь после модерации</h3>
 		</div>
+		<div id="endcomments" style="margin: 0 0 30px 0;">&nbsp;</div>
+      <?php endfor; ?>
 
-		<div class="commentVoteSuccessMsgPlaceholder" id="commentVoteSuccessMsgPlaceholder" style="display:none;">
-			Вы проголосовали		</div>
 
-		<div class="commentVoteErrorMsgPlaceholder" id="commentVoteErrorMsgPlaceholder" style="display:none;">
-                   </div>
+
 
 
 
