@@ -18,12 +18,12 @@
 <?php echo $page['url_frame']; ?>
 		<p><a target="_blank" href="<?php echo $main_name; ?><?php echo $page['url_int']; ?>"><?php echo $page['teme_int']; ?></a></p>
 
-<?php //require("comments.php"); ?>
+<?php require("comments.php"); ?>
 <div class="comments" id="comments" style="text-align: left;">
-	<div class="comments__head">Комментарии <span class="news__counter"><?php //echo $total_comments; ?></span></div>
+	<div class="comments__head">Комментарии <span class="news__counter"><?php echo $total_comments; ?></span></div>
 
 
-	  <?php // for ($kk = 0, $kk < $total_comments, $kk++): ?>
+	  <?php for ($kk = 0, $kk < $total_comments, $kk++): ?>
 		<div class="comments__container" style="overflow-wrap: break-word; word-wrap: break-word; word-break: normal; line-break: auto; hyphens: manual;">
 			<div class="comment  commentContainer " >
 			         <div class="comment__info">
@@ -40,7 +40,7 @@
 		        </div>
 		</div>
 		<div id="endcomments" style="margin: 0 0 30px 0;">&nbsp;</div>
-      <?php //endfor; ?>
+      <?php endfor; ?>
 
 
 
