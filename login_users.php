@@ -13,6 +13,12 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
             $url_avatar = '/pictures/avatars/'.$login;
             $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`, `аdm`, `url_avatar`) 
 	VALUES ($login,'$pass',$аdm,'$url_avatar')";
+            $result_user = mysqli_query($link, $insert_com);
+            if ($result_user == 'true'){
+                //echo "Информация занесена в базу данных";
+            }else{
+                echo "Информация не занесена в базу данных";
+            }
             $com_form = true; // пускаем делать комменты с новым логином
         } else { // такой логин уже есть, нужно проверить пароль
             $select_users = "SELECT * FROM $Name_database.$table_users WHERE pass = '$pass' AND login = '$login' ";

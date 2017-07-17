@@ -86,7 +86,9 @@
 						<span class="comments__info-text">Запомните пароль и логин для последующей аунтификации</span>
 						<span class="comments__info-text"><b></b></span>
 					    </div>
+							<div class="comments__input">
 							<button class="comments__submit" id="commentFormSubmit">Отправить</button>
+								</div>
 						<form>
 
 				</div>
