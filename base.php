@@ -12,6 +12,8 @@ if (!$link) {
 
 $table_users ='users';
 
+$table_comments ='comments';
+
 $table ='news';
 $select = "SELECT * FROM $Name_database.$table WHERE razdel = 'toplist' AND datetime < '$datetime_site' ORDER BY datetime DESC LIMIT 4";
 $res = mysqli_query($link, $select);
