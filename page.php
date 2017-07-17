@@ -68,7 +68,7 @@
 	    <?php else:?>
 			<div class="commentFormContainer" id="commentformcontainer">
 
-				<div class="comments__head">Завести логин и пароль
+				<div class="comments__head">Завести логин и пароль (войти)
 					<button type="button" id="commentFormClose" class="icon-cancel" style="float: right; display: none;"></button>
 				</div>
 

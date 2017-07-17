@@ -10,7 +10,7 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
         $row_users = mysqli_fetch_array($res_users);
         if (empty($row_users[0])) {//такого логина еще нет, можно добавить его в базу данных и запомнить в сессии
             $аdm = 0;
-            $url_avatar = '/pictures/avatars/'.$login;
+            $url_avatar = '/pictures/avatars/'.$login.'/';
             $id_user = time();
             $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`,`adm`, `url_avatar`,`id_user`) 
 	VALUES ('$login','$pass',$аdm,'$url_avatar',$id_user)";
@@ -20,7 +20,9 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
             }else{
                 echo "Информация не занесена в базу данных";
             }
-            $com_form = true; // пускаем делать комменты с новым логином
+            $_SESSION['pass'] = $pass;
+            $_SESSION['login'] = $login;
+            $com_form = true; // пускаем делать комменты с новым логином и запущенной сессией
         } else { // такой логин уже есть, нужно проверить пароль
             $select_users = "SELECT * FROM $Name_database.$table_users WHERE pass = '$pass' AND login = '$login' ";
             $res_users = mysqli_query($link, $select_users);
