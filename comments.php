@@ -14,3 +14,4 @@ while($row = mysqli_fetch_array($res_comments))
 }
 
 $total_comments = $j;
+
