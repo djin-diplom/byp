@@ -28,14 +28,13 @@
 			<div class="comment  commentContainer " >
 			         <div class="comment__info">
 					<div class="comment__rating commentVoting">
-			<a href="#arcommvoteneg-7854145" class="comment__rating-change negVoteLink">–</a>
-			<span class="comment__rating-value posweight">+4</span>
-			<a href="#arcommvotepos-7854145" class="comment__rating-change posVoteLink">+</a>
+
+			<span class="comment__rating-value posweight"><?php echo $comments_new[$j++]['datetime_com']; ?></span>
+
 		                       </div>
-					<span class="comment__author">freedom</span>,
-				        <span class="comment__time">16:45, 13.07</span>
+					<span class="comment__author"><?php echo $comments_login[$j]['login']; ?></span>
 			         </div>
-			<p class="comment__content">Люблю Белоруссию!</p>
+			<p class="comment__content"><?php echo $comments_text[$k]['text_com']; ?></p>
 			<a class="comment__answer-btn replyLink" href="#replycomment-7854145">Ответить</a>
 		        </div>
 		</div>
