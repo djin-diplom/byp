@@ -71,7 +71,7 @@ if (!empty($_POST['text_com'])) { //если есть коммент
     $insert_com = "REPLACE INTO $Name_database.$table_comments (`id_com`, `text_com`,`login`, `id_news`,`datetime_com`) 
 	VALUES ($id_com,'$text_com','$login',$id_news,'$datetime_com')";
     $result_user = mysqli_query($link, $insert_com);
-    header('Location: '.$main_name);//header('Location: '.$main_name.$page['url']);
+    header('Location: '.$main_name.'/admin');//header('Location: '.$main_name);//header('Location: '.$main_name.$page['url']);
     if ($result_user = 'true'){
 
     }else{
