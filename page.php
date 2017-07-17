@@ -48,14 +48,14 @@
         <?php if($com_form):?>
 		<div class="commentFormContainer" id="commentformcontainer">
 
-			<div class="comments__head">Написать комментарий
+			<div class="comments__head">Написать комментарий (<?php echo $_SESSION['login'] ?>)
 				<button type="button" id="commentFormClose" class="icon-cancel" style="float: right; display: none;"></button>
 			</div>
 
 			<div class="comments__write">
 
 				<div class="comments__input">
-					<label for="in_comment">Комментарий от <?php echo $_SESSION['login'] ?></label>
+					<label for="in_comment">Комментарий</label>
 					    <form method="POST" action="<?php echo $main_name; ?><?php echo $page['url']; ?>">
 					        <textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
 					        <button class="comments__submit" id="commentFormSubmit">Отправить</button>
