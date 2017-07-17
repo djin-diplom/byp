@@ -56,9 +56,12 @@
 
 				<div class="comments__input">
 					<label for="in_comment">Комментарий</label>
-					<textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
-					<button class="comments__submit" id="commentFormSubmit">Отправить</button>
-					<span class="comments__info-text"><b></b></span>
+					    <form method="POST" action="<?php echo $main_name; ?><?php echo $page['url']; ?>">
+					        <textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
+					        <button class="comments__submit" id="commentFormSubmit">Отправить</button>
+					        <span class="comments__info-text"><b></b></span>
+						<form>
+
 				</div>
 			</div>
 		</div>
@@ -71,19 +74,20 @@
 
 				<div class="comments__write">
 
-
-					<div class="comments__input is-marked">
+					    <form method="POST" action="<?php echo $main_name; ?><?php echo $page['url']; ?>">
+					    <div class="comments__input is-marked">
 						<i class="icon-comment"></i>
 						<label for="in_author">Имя</label>
 						<input type="text" name="login" id="in_author" maxlength="20">
-					</div>
-					<div class="comments__input">
+					    </div>
+					    <div class="comments__input">
 						<label for="in_email">Пароль</label>
 						<input type="password" name="pass" maxlength="20">
 						<span class="comments__info-text">Запомните пароль и логин для последующей аунтификации</span>
-						<button class="comments__submit" id="commentFormSubmit">Отправить</button>
 						<span class="comments__info-text"><b></b></span>
-					</div>
+						<button class="comments__submit" id="commentFormSubmit">Отправить</button>
+					    </div>
+						<form>
 
 				</div>
 			</div>
