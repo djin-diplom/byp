@@ -33,9 +33,9 @@
 
 		                       </div>
 					<span class="comment__author"><?php echo $comments[$k]['login']; ?></span>,
-						 <span class="comment__time">9:09, 17.07</span>
+						 <span class="comment__time"><?php echo $comments[$k]['datetime_com'][0]; ?></span>
 			         </div>
-			<p class="comment__content"><?php echo $comments[$k]['text_com'][0]; ?></p>
+			<p class="comment__content"><?php echo $comments[$k]['text_com']; ?></p>
 		        </div>
 		</div>
 		<div id="endcomments" style="margin: 0 0 30px 0;">&nbsp;</div>
