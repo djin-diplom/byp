@@ -72,7 +72,8 @@ if (!empty($_POST['text_com'])) { //если есть коммент
 	VALUES ($id_com,'$text_com','$login',$id_news,'$datetime_com')";
     $result_user = mysqli_query($link, $insert_com);
     if ($result_user == 'true'){
-        //echo "Информация занесена в базу данных";
+        //если внесена, перенаправляем
+        header('Location: '.$main_name.$page['url']);
     }else{
         echo "Информация не занесена в базу данных";
     }
