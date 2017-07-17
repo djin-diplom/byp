@@ -9,6 +9,7 @@ require_once("functions.php");
 require_once("requisites.php");
 require_once("base.php");
 require_once("route.php");
+if (!$route) require_once("login_users.php");
 require_once("head.php");
 ?>
 </head>
@@ -32,7 +33,7 @@ require_once("head.php");
 		
 		if ($route) require_once("l-main.php");
 		else {
-            require_once("login_users.php");
+
             require_once("page.php");
         }
 		?>
