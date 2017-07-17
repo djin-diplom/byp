@@ -81,6 +81,7 @@
 						<label for="in_email">Пароль</label>
 						<input type="password" name="pass" maxlength="20">
 						<span class="comments__info-text">Запомните пароль и логин для последующей аунтификации</span>
+						<button class="comments__submit" id="commentFormSubmit">Отправить</button>
 						<span class="comments__info-text"><b></b></span>
 					</div>
 
