@@ -12,8 +12,8 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
             $аdm = 0;
             $url_avatar = '/pictures/avatars/'.$login;
             $id_user = time();
-            $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`, `аdm`, `url_avatar`,`id_user`) 
-	VALUES ($login,'$pass',$аdm,'$url_avatar',$id_user)";
+            $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`,`adm`, `url_avatar`,`id_user`) 
+	VALUES ('$login','$pass',$аdm,'$url_avatar',$id_user)";
             $result_user = mysqli_query($link, $insert_com);
             if ($result_user == 'true'){
                 //echo "Информация занесена в базу данных";
