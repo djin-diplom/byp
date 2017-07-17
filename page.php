@@ -20,7 +20,7 @@
 
 <?php //require("comments.php"); ?>
 <div class="comments" id="comments" style="text-align: left;">
-	<div class="comments__head">Комментарии <span class="news__counter"><?php echo $total_comments; ?></span></div>
+	<div class="comments__head">Комментарии <span class="news__counter"><?php //echo $total_comments; ?></span></div>
 
 
 	  <?php // for ($kk = 0, $kk < $total_comments, $kk++): ?>
