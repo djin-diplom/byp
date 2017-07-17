@@ -29,12 +29,12 @@
 			         <div class="comment__info">
 					<div class="comment__rating commentVoting">
 
-			<span class="comment__rating-value posweight"><?php echo $comments_new[$j++]['datetime_com']; ?></span>
+			<span class="comment__rating-value posweight"><?php echo $comments[$k]['datetime_com']; ?></span>
 
 		                       </div>
-					<span class="comment__author"><?php echo $comments_login[$j]['login']; ?></span>
+					<span class="comment__author"><?php echo $comments[$k]['login']; ?></span>
 			         </div>
-			<p class="comment__content"><?php echo $comments_text[$k]['text_com']; ?></p>
+			<p class="comment__content"><?php echo $comments[$k]['text_com']; ?></p>
 			<a class="comment__answer-btn replyLink" href="#replycomment-7854145">Ответить</a>
 		        </div>
 		</div>

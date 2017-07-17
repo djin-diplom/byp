@@ -8,9 +8,9 @@ $res_comments = mysqli_query($link, $select_comments);
 $j = 0;
 while($row = mysqli_fetch_array($res_comments))
 {
-    $comments_text[$j]['text_com'] = $row['text_com'];
-    $comments_login[$j]['login'] = $row['login'];
-    $comments_new[$j++]['datetime_com'] = $row['datetime_com'];
+    $comments[$j]['text_com'] = $row['text_com'];
+    $comments[$j]['login'] = $row['login'];
+    $comments[$j++]['datetime_com'] = $row['datetime_com'];
 }
 
 $total_comments = $j;
