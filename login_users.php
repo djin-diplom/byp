@@ -1,5 +1,7 @@
 <?php
 
+
+
 if (!isset($_SESSION['login'])) { // сессия пустая - значит это либо пустой вход, либо новый пользователь
 
     if (!empty($_POST['login'])) {// проверяем, есть ли такой пользователь вообще в базе данных
@@ -40,5 +42,40 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
 
 
 
+$id_news = $page['id'];
+
+$select_comments = "SELECT * FROM $Name_database.$table_comments WHERE id_news = '$id_news' ORDER BY datetime_com DESC LIMIT 100";
+$res_comments = mysqli_query($link, $select_comments);
+
+$j = 0;
+while($row = mysqli_fetch_array($res_comments))
+{
+    $comments[$j]['text_com'] = $row['text_com'];
+    $comments[$j]['login'] = $row['login'];
+    $comments[$j++]['datetime_com'] =  explode ( ' ', $row['datetime_com']);
+}
+
+$total_comments = $j;
+
+
+
+if (!empty($_POST['text_com'])) { //если есть коммент
+
+
+    $id_com = time();
+    $text_com = $_POST['text_com'];
+    $login = $_SESSION['login'];
+    $id_news = $page['id'];
+    $datetime_com = date("Y-m-d H:i:s");
+
+    $insert_com = "REPLACE INTO $Name_database.$table_comments (`id_com`, `text_com`,`login`, `id_news`,`datetime_com`) 
+	VALUES ($id_com,'$text_com','$login',$id_news,'$datetime_com')";
+    $result_user = mysqli_query($link, $insert_com);
+    if ($result_user == 'true'){
+        //echo "Информация занесена в базу данных";
+    }else{
+        echo "Информация не занесена в базу данных";
+    }
+}
 
 

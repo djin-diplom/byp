@@ -18,7 +18,7 @@
 <?php echo $page['url_frame']; ?>
 		<p><a target="_blank" href="<?php echo $main_name; ?><?php echo $page['url_int']; ?>"><?php echo $page['teme_int']; ?></a></p>
 
-<?php require("comments.php"); ?>
+
 <div class="comments" id="comments" style="text-align: left;">
 	<div class="comments__head">Комментарии <span class="news__counter"><?php echo $total_comments; ?></span></div>
 
@@ -55,7 +55,7 @@
 			<div class="comments__write">
 
 				<div class="comments__input">
-					<label for="in_comment">Комментарий</label>
+					<label for="in_comment">Комментарий от <?php echo $_SESSION['login'] ?></label>
 					    <form method="POST" action="<?php echo $main_name; ?><?php echo $page['url']; ?>">
 					        <textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
 					        <button class="comments__submit" id="commentFormSubmit">Отправить</button>
