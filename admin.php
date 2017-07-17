@@ -31,7 +31,7 @@ $teme_int = $_POST["teme_int"];
 	VALUES ($id,'$datetime','$teme','$description','$razdel','$url',$comments,'$text','$keys','$url_ext','$url_frame','$url_int','$teme_int')";
 	
 	$result = mysqli_query($link, $insert);
-	if ($result == 'true'){
+	if ($result = 'true'){
        //echo "Информация занесена в базу данных";
     }else{
     echo "Информация не занесена в базу данных";
