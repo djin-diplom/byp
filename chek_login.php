@@ -17,7 +17,7 @@ $row_users = mysqli_fetch_array($res_users);
 if (empty($row_users[2]) and $row_users[2] != 1) header('Location: '.$main_name.'/admin');//проверяем права доступа в $row_users[2]
 else {
 	echo "<a href='/delete'>Выйти из учетной записи $login</a>";
-		$_SESSION['pass'] = $pass;
+	$_SESSION['pass'] = $pass;
 	$_SESSION['login'] = $login;
-	
 }
+

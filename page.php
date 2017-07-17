@@ -45,7 +45,7 @@
 
 
 
-
+        <?php if($com_form):?>
 		<div class="commentFormContainer" id="commentformcontainer">
 
 			<div class="comments__head">Написать комментарий
@@ -63,23 +63,60 @@
 				<div class="comments__input is-marked">
 				<i class="icon-comment"></i>
 					<label for="in_author">Имя</label>
-					<input type="text" name="in_author" id="in_author" maxlength="20">
+					<input type="text" name="login" id="in_author" maxlength="20">
 				</div>
 				<div class="comments__input">
-					<label for="in_email">E-mail</label>
-					<input type="text" name="in_email" id="in_email"  maxlength="30">
-					<span class="comments__info-text">E-mail не будет опубликован</span>
+					<label for="in_email">Пароль</label>
+					<input type="password" name="pass" maxlength="20">
+					<span class="comments__info-text">Запомните пароль для последующей аунтификации</span>
 				</div>
 				<div class="comments__input">
 					<label for="in_comment">Комментарий</label>
-					<textarea name="in_comment" id="in_comment" cols="" rows="10" maxlength="1000"></textarea>
+					<textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
 					<button class="comments__submit" id="commentFormSubmit">Отправить</button>
 					<span class="comments__info-text"><b></b></span>
 				</div>
 			</div>
 		</div>
+	    <?php else:?>
+			<div class="commentFormContainer" id="commentformcontainer">
+
+				<div class="comments__head">Завести логин и пароль
+					<button type="button" id="commentFormClose" class="icon-cancel" style="float: right; display: none;"></button>
+				</div>
+
+				<div class="comments__write">
+					<input type="hidden" name="c"    value="arcomm">
+					<input type="hidden" name="i" value="256251">
+					<input type="hidden" name="p"   value="1">
+					<input type="hidden" name="c2"   value="araddcom">
+					<input type="hidden" id="comment_ari"                      value="256251">
+					<input type="hidden" id="comment_cmi"                      value="0">
+
+					<div class="comments__input is-marked">
+						<i class="icon-comment"></i>
+						<label for="in_author">Имя</label>
+						<input type="text" name="login" id="in_author" maxlength="20">
+					</div>
+					<div class="comments__input">
+						<label for="in_email">Пароль</label>
+						<input type="password" name="pass" maxlength="20">
+						<span class="comments__info-text">Запомните пароль для последующей аунтификации</span>
+					</div>
+					<div class="comments__input">
+						<label for="in_comment">Комментарий</label>
+						<textarea name="text_com"  cols="" rows="10" maxlength="1000"></textarea>
+						<button class="comments__submit" id="commentFormSubmit">Отправить</button>
+						<span class="comments__info-text"><b></b></span>
+					</div>
+				</div>
+			</div>
+
+	    <?php endif; ?>
 
 		<div id="commentFormProgressPanel" style="display:none; position: absolute; top:0; left:0; background-color: #F6F6F6;"> </div>
+
+
 		<img border="0" title="Loading..." alt="" src="/images/ajax-loader.gif" id="progressimage" style="display:none; position: absolute; margin:0; padding:0; border:0;"/>
 </div>
 </article>

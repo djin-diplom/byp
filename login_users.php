@@ -1,0 +1,34 @@
+<?php
+
+if (!isset($_SESSION['pass'])) { // сессия пустая - значит это либо пустой вход, либо новый пользователь
+
+    if (!empty($_POST['login'])) {// проверяем, есть ли такой пользователь вообще в базе данных
+        $login = $_POST['login'];
+        $pass = $_POST['pass'];
+        $select_users = "SELECT * FROM $Name_database.$table_users WHERE login = '$login' ";
+        $res_users = mysqli_query($link, $select_users);
+        $row_users = mysqli_fetch_array($res_users);
+        if (empty($row_users[0])) {//такого логина еще нет, можно добавить его в базу данных.
+            $аdm = 0;
+            $url_avatar = '/pictures/avatars/'.$login;
+            $insert_com = "REPLACE INTO $Name_database.$table_users (`login`, `pass`, `аdm`, `url_avatar`) 
+	VALUES ($login,'$pass',$аdm,'$url_avatar')";
+            $com_form = true; // пускаем делать комменты с новым логином
+        } else { // такой логин уже есть, нужно проверить пароль
+            $select_users = "SELECT * FROM $Name_database.$table_users WHERE pass = '$pass' AND login = '$login' ";
+            $res_users = mysqli_query($link, $select_users);
+            $row_users = mysqli_fetch_array($res_users);
+            if (empty($row_users[0])) $com_form = false;//выборка пустая - пароль оказался неверным. Не пускаем делать комменты
+            else $com_form = true; // пускаем делать комменты
+        }
+
+    } else $com_form = false;//случай, когда переменная пост пустая - не пускаем делать комменты
+
+
+
+} else $com_form = true; //сессия полная - пускаем делать комменты
+
+
+
+
+

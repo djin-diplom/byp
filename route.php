@@ -58,7 +58,8 @@ switch($rubrika){
 		exit;
 	} else {
 	require("chek_login.php");
-	$admin = true;
+		
+		$admin = true;
 	if (empty($nomer_url_mass[2])) $keys_value = 'empty';
 	else $keys_value = $nomer_url_mass[2];
 	if (!empty($nomer_url_mass[3]) and $nomer_url_mass[3] > 10) $nomer_url = $nomer_url_mass[3];
