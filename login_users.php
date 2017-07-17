@@ -28,7 +28,11 @@ if (!isset($_SESSION['login'])) { // сессия пустая - значит э
             $res_users = mysqli_query($link, $select_users);
             $row_users = mysqli_fetch_array($res_users);
             if (empty($row_users[0])) $com_form = false;//выборка пустая - пароль оказался неверным. Не пускаем делать комменты
-            else $com_form = true; // пускаем делать комменты
+            else {// пускаем делать комменты и заносим в сессию
+                $com_form = true;
+                $_SESSION['pass'] = $pass;
+                $_SESSION['login'] = $login;
+            }
         }
 
     } else $com_form = false;//случай, когда переменная пост пустая - не пускаем делать комменты
