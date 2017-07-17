@@ -29,13 +29,13 @@
 			         <div class="comment__info">
 					<div class="comment__rating commentVoting">
 
-			<span class="comment__rating-value posweight"><?php echo $comments[$k]['datetime_com']; ?></span>
+			<span class="comment__rating-value posweight"><?php echo $comments[$k]['datetime_com'][1]; ?></span>
 
 		                       </div>
-					<span class="comment__author"><?php echo $comments[$k]['login']; ?><?php echo $comments[$k]['datetime_com']; ?></span>
+					<span class="comment__author"><?php echo $comments[$k]['login']; ?></span>,
+						 <span class="comment__time">9:09, 17.07</span>
 			         </div>
-			<p class="comment__content"><?php echo $comments[$k]['text_com']; ?></p>
-			<a class="comment__answer-btn replyLink" href="#replycomment-7854145">Ответить</a>
+			<p class="comment__content"><?php echo $comments[$k]['text_com'][0]; ?></p>
 		        </div>
 		</div>
 		<div id="endcomments" style="margin: 0 0 30px 0;">&nbsp;</div>

@@ -10,7 +10,7 @@ while($row = mysqli_fetch_array($res_comments))
 {
     $comments[$j]['text_com'] = $row['text_com'];
     $comments[$j]['login'] = $row['login'];
-    $comments[$j++]['datetime_com'] = $row['datetime_com'];
+    $comments[$j++]['datetime_com'] =  explode ( ' ', $row['datetime_com']);
 }
 
 $total_comments = $j;
