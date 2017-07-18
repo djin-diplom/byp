@@ -73,9 +73,9 @@ if (!empty($_POST['text_com'])) { //добавление комментарие�
     $result_user = mysqli_query($link, $insert_com);
     
     if ($result_user = 'true'){
-        $page_comments = $page['comments'] + 1;
+
         $page_id = $page['id'];
-        $insert_comments = "UPDATE $Name_database.$table SET comments=$page_comments WHERE id = $page_id ";
+        $insert_comments = "UPDATE $Name_database.$table SET comments=$total_comments WHERE id = $page_id ";
         $res_comments = mysqli_query($link, $insert_comments);
         if ($res_comments = 'true'){
 
