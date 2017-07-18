@@ -59,7 +59,7 @@ $total_comments = $j;
 
 
 
-if (!empty($_POST['text_com'])) { //если есть коммент
+if (!empty($_POST['text_com'])) { //добавление комментариев
 
 
     $id_com = time();
@@ -73,10 +73,20 @@ if (!empty($_POST['text_com'])) { //если есть коммент
     $result_user = mysqli_query($link, $insert_com);
     
     if ($result_user = 'true'){
+        $page_comments = $page['comments'] + 1;
+        $insert_comments = "REPLACE INTO $Name_database.$table (`comments`) VALUES ($page_comments) WHERE url = '$REQUEST_URI' ";
+        $res_comments = mysqli_query($link, $insert_comments);
+        if ($res_comments = 'true'){
+
+        }else{
+            echo "Информация не занесена в базу данных";
+        }
         header('Location: '.$main_name.$page['url']);
     }else{
         echo "Информация не занесена в базу данных";
     }
+
+
 }
 
 
