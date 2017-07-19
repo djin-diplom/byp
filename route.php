@@ -155,7 +155,7 @@ while($row = mysqli_fetch_array($res))
 $total = $i;
 
 if($rss == 1) {
-	//require("rss.xml");
-	echo $rss_file;
+	require("rss.xml");
+	//echo $rss_file;
 	exit;
 }
