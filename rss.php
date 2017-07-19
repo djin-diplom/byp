@@ -22,15 +22,19 @@
 
         <language>ru</language>';
 
+$n_l_t =  $news_latest[$i]['teme'];
+$n_l_u = $news_latest[$i++]['url'];
+$n_l_date = DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]["datetime"])->format(DateTime::RSS);
+$n_l_des = $news_latest[$i]["description"];
 
         for($i = 0; $i < $total; $i++) {
 $rss_file = $rss_file.'<item>
-            <title>'.$news_latest[$i]["teme"].'</title>
-            <link>'.$main_name.$news_latest[$i++]["url"].'</link>
+            <title>'.$n_l.'</title>
+            <link>'.$main_name.$n_l_u.'</link>
             <category>news</category>
             <author/>
-            <pubDate>'.DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]["datetime"])->format(DateTime::RSS).'</pubDate>
-            <description>'.$news_latest[$i]["description"].'</description>
+            <pubDate>'.$n_l_date.'</pubDate>
+            <description>'.$n_l_des.'</description>
             <fulltext>
                 <![CDATA[ ]]>
             </fulltext>
