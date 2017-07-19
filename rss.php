@@ -29,7 +29,7 @@ $n_l_des = $news_latest[$i]["description"];
 
         for($i = 0; $i < $total; $i++) {
 $rss_file = $rss_file.'<item>
-            <title>'.$n_l.'</title>
+            <title>'.$n_l_t.'</title>
             <link>'.$main_name.$n_l_u.'</link>
             <category>news</category>
             <author/>
