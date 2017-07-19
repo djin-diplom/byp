@@ -25,12 +25,12 @@
 
         for($i = 0; $i < $total; $i++) {
 $rss_file = $rss_file.'<item>
-            <title>'.$news_latest[$i]['teme'].'</title>
-            <link>'.$main_name.$news_latest[$i++]['url'].'</link>
+            <title>'.$news_latest[$i]["teme"].'</title>
+            <link>'.$main_name.$news_latest[$i++]["url"].'</link>
             <category>news</category>
             <author/>
-            <pubDate>'.DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]['datetime'])->format(DateTime::RSS).'</pubDate>
-            <description>'.$news_latest[$i]['description'].'</description>
+            <pubDate>'.DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]["datetime"])->format(DateTime::RSS).'</pubDate>
+            <description>'.$news_latest[$i]["description"].'</description>
             <fulltext>
                 <![CDATA[ ]]>
             </fulltext>
