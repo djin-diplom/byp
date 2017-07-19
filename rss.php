@@ -1,4 +1,4 @@
-<?php $rss_file = '<source lang="xml">
+<?php $rss_file = '
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
     <channel>
@@ -38,8 +38,7 @@ $rss_file = $rss_file.'<item>
 }
 
 $rss_file = $rss_file.'</channel>
-</rss>
-</source>';
+</rss>';
 
 file_put_contents('rss.xml', $rss_file);
 
