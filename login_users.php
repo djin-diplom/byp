@@ -5,8 +5,8 @@
 if (!isset($_SESSION['login'])) { // сессия пустая - значит это либо пустой вход, либо новый пользователь
 
     if (!empty($_POST['login'])) {// проверяем, есть ли такой пользователь вообще в базе данных
-        $login = $_POST['login'];
-        $pass = $_POST['pass'];
+        $login = mysqli_real_escape_string($link, $_POST['login']);
+        $pass = mysqli_real_escape_string($link, $_POST['pass']);
         $select_users = "SELECT * FROM $Name_database.$table_users WHERE login = '$login' ";
         $res_users = mysqli_query($link, $select_users);
         $row_users = mysqli_fetch_array($res_users);
