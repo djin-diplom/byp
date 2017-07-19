@@ -63,7 +63,7 @@ if (!empty($_POST['text_com'])) { //добавление комментарие�
 
 
     $id_com = time();
-    $text_com = mysqli_real_escape_string($_POST['text_com']);
+    $text_com = mysqli_real_escape_string($link, $_POST['text_com']);
     $login = $_SESSION['login'];
     $id_news = $page['id'];
     $datetime_com = date("Y-m-d H:i:s");
