@@ -30,7 +30,7 @@
 		                        <li><a class="icon-vk" href="https://vk.com/<?php echo $main_name_corot; ?>">vkontakte</a></li>
 		                       <li><a class="icon-odnoklassniki" href="https://ok.ru/<?php echo $main_name_corot; ?>">ok.ru</a></li>
 		                           <li><a class="icon-gplus" href="https://google.com/+<?php echo $main_name_corot; ?>org_news/">gplus</a></li>
-		                         <li><a class="icon-rss" href="<?php echo $main_name; ?>rss">RSS</a></li>
+		                         <li><a class="icon-rss" href="<?php echo $main_name; ?>/rss">RSS</a></li>
 	                        </ul>
                         </div>
 						<div class="b subscription_mail">
