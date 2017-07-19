@@ -1,5 +1,4 @@
-<?php $rss_file = '
-<?xml version="1.0" encoding="UTF-8"?>
+<?php $rss_file = '<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
     <channel>
         <title>
