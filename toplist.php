@@ -9,7 +9,7 @@
 		    <h2 class="news__title"><a href="<?php echo $main_name; ?><?php echo $topnews[0]['url']; ?>"><?php echo $topnews[0]['teme']; ?></a></h2>
 		    <p><?php echo $topnews[0]['description']; ?>
 			    <a href="<?php echo $main_name; ?><?php echo $topnews[0]['url']; ?>" class="news__counter">
-				    <?php echo $toplist[0]['comments']; ?>
+				    <?php echo $topnews[0]['comments']; ?>
 				</a>
 			</p>
 </div>
