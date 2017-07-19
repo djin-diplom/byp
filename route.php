@@ -49,7 +49,6 @@ switch($rubrika){
 		$keys_value = 'empty';
 		$keys = '';
 		$nomer_url = 10;
-		exit;
 		break;
 	    case 'delete': unset($_SESSION['name']); // или $_SESSION = array() для очистки всех данных сессии
 		session_destroy();
