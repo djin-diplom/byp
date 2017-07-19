@@ -39,7 +39,18 @@ $rubrika = $nomer_url_mass[1];
 
 $keys_name = 'keys';
 
+$nomer = 10;
+$rss = 0;
+
 switch($rubrika){
+	case 'rss.php': $rss = 1;//require("rss.php"); exit;
+		$nomer = 100;
+		$rubrika = 'pastnews';
+		$keys_value = 'empty';
+		$keys = '';
+		$nomer_url = 10;
+		exit;
+		break;
 	    case 'delete': unset($_SESSION['name']); // или $_SESSION = array() для очистки всех данных сессии
 		session_destroy();
 		header('Location: '.$main_name.'/admin');
@@ -121,7 +132,8 @@ $res = mysqli_query($link, $select);
 $row = mysqli_fetch_row($res);
 $all_count = $row[0]; // всего записей по выборке
 
-$select = "SELECT * FROM $Name_database.$table WHERE datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%' ORDER BY datetime DESC LIMIT $nomer_url_2, 10";
+
+$select = "SELECT * FROM $Name_database.$table WHERE datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%' ORDER BY datetime DESC LIMIT $nomer_url_2, $nomer";
 $res = mysqli_query($link, $select);
 
 //if ($nomer_url_2 == 0) $nomer_url_2 = 1;
@@ -141,3 +153,8 @@ while($row = mysqli_fetch_array($res))
 	$news_latest[$i++]['url'] = $row['url'];
 }
 $total = $i;
+
+if($rss == 1) {
+	require("rss.php");
+	exit;
+}

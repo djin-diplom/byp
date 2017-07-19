@@ -37,6 +37,8 @@ if ($route) {//Переключатель заголовков
 <meta name="title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>" />
 <link rel="image_src" href="<?php echo $site_name; ?><?php echo $url_og_picture; ?>" />
 
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php echo $site_name; ?>/rss.php" />
+
 
 
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $main_name; ?>/images.ico">

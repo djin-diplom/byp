@@ -1,8 +1,3 @@
-
-
-<!DOCTYPE html>
-<html>
-<head>
 <?php
 session_start();
 require_once("functions.php");
@@ -10,6 +5,12 @@ require_once("requisites.php");
 require_once("base.php");
 require_once("route.php");
 if (!$route) require_once("login_users.php");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<?php
 require_once("head.php");
 ?>
 </head>
@@ -32,10 +33,7 @@ require_once("head.php");
 		require_once("l-sidebar.php");
 		
 		if ($route) require_once("l-main.php");
-		else {
-
-            require_once("page.php");
-        }
+		else require_once("page.php");
 		?>
 	</div>
     <?php
