@@ -10,7 +10,7 @@ if ($route) {//Переключатель заголовков
 	$description = $page['description'];
 	$keys = $page['keys'];
     $url_og = $page['url'];
-    $url_og_picture = str_replace('news', 'pictures', $page['url'])."/img_1.jpg";
+    $url_og_picture = str_replace('news', 'pictures', $page['url'])."img_1.jpg";
 }
 ?>
 <meta name="yandex-verification" content="08c2ed06216b74b4" />
