@@ -43,7 +43,8 @@ $nomer = 10;
 $rss = 0;
 
 switch($rubrika){
-	case 'rss.xml': $rss = 1;//require("rss.php"); exit;
+	case 'rss.xml': $rss = 1;
+		require("rss.php"); //создаем файл rss.xml
 		$nomer = 20;
 		$rubrika = 'news';
 		$keys_value = 'empty';
@@ -154,6 +155,6 @@ while($row = mysqli_fetch_array($res))
 $total = $i;
 
 if($rss == 1) {
-	require("rss.php");
+	require("rss.xml");
 	exit;
 }
