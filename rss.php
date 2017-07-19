@@ -22,12 +22,13 @@
 
         <language>ru</language>';
 
-$n_l_t =  $news_latest[$i]['teme'];
-$n_l_u = $news_latest[$i++]['url'];
-$n_l_date = DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]["datetime"])->format(DateTime::RSS);
-$n_l_des = $news_latest[$i]["description"];
+
 
         for($i = 0; $i < $total; $i++) {
+            $n_l_t =  $news_latest[$i]['teme'];
+            $n_l_u = $news_latest[$i]['url'];
+            $n_l_date = DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]['datetime'])->format(DateTime::RSS);
+            $n_l_des = $news_latest[$i]['description'];
 $rss_file = $rss_file.'<item>
             <title>'.$n_l_t.'</title>
             <link>'.$main_name.$n_l_u.'</link>
