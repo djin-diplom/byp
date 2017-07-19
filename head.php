@@ -6,9 +6,9 @@ if ($route) {//Переключатель заголовков
     $url_og = $site_name;
     $url_og_picture = $site_name."/img/metro.jpg";
 } else {
-	$title = $page['teme'];
-	$description = $page['description'];
-	$keys = $page['keys'];
+	$title = htmlspecialchars($page['teme']);
+	$description = htmlspecialchars($page['description']);
+	$keys = htmlspecialchars($page['keys']);
     $url_og = $page['url'];
     $url_og_picture = str_replace('news', 'pictures', $page['url'])."img_1.jpg";
 }
