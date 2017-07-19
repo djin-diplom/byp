@@ -26,11 +26,13 @@ if ($route) {//Переключатель заголовков
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta name="description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" >
 	<meta name="keywords" content="<?php echo $site_name; ?> :: <?php echo $keys; ?>">
-
+<meta property="og:type" content="website" />
 <meta property="og:title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>" />
 <meta property="og:description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" />
 <meta property="og:url" content="<?php echo $site_name; ?><?php echo $url_og; ?>" />
 <meta property="og:image" content="<?php echo $site_name; ?><?php echo $url_og_picture; ?>" />
+<meta property="og:image:width" content="320" />
+<meta property="og:image:height" content="270" />
 
 <meta name="title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>" />
 <link rel="image_src" href="<?php echo $site_name; ?><?php echo $url_og_picture; ?>" />
