@@ -43,13 +43,12 @@ $nomer = 10;
 $rss = 0;
 
 switch($rubrika){
-	case 'rss.php': $rss = 1;//require("rss.php"); exit;
-		$nomer = 15;
+	case 'rss.xml': $rss = 1;//require("rss.php"); exit;
+		$nomer = 20;
 		$rubrika = 'news';
 		$keys_value = 'empty';
 		$keys = '';
 		$nomer_url = 10;
-		$datetime_site = date("Y-m-d H:i:s");
 		break;
 	    case 'delete': unset($_SESSION['name']); // или $_SESSION = array() для очистки всех данных сессии
 		session_destroy();
