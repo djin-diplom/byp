@@ -10,9 +10,9 @@
         </description>
         <image>
             <title>
-                '.$site_name.' ?> :: Новости Беларуси - Белорусские новости - Новости Белоруссии - Республика Беларусь - Минск
+                '.$site_name.' :: Новости Беларуси - Белорусские новости - Новости Белоруссии - Республика Беларусь - Минск
             </title>
-            <url>/img/metro.jpg</url>
+            <url>'.$main_name.'/img/metro.jpg</url>
             <link>'.$main_name.'</link>
             <description>
                 '.$site_name.' :: Новости Беларуси, Белорусские новости, Новости Белоруссии, News from Belarus
@@ -28,20 +28,18 @@
             $n_l_u = $news_latest[$i]['url'];
             $n_l_date = DateTime::createFromFormat('Y-m-d H:i:s', $news_latest[$i]['datetime'])->format(DateTime::RSS);
             $n_l_des = $news_latest[$i]['description'];
-$rss_file = $rss_file.'<item>
+$rss_file = $rss_file.'
+<item>
             <title>'.$n_l_t.'</title>
             <link>'.$main_name.$n_l_u.'</link>
             <category>news</category>
-            <author/>
             <pubDate>'.$n_l_date.'</pubDate>
-            <description>'.$n_l_des.'</description>
-            <fulltext>
-                <![CDATA[ ]]>
-            </fulltext>
+            <description>'.$n_l_des.'</description> 
         </item>';
 }
 
-$rss_file = $rss_file.'</channel>
+$rss_file = $rss_file.'
+</channel>
 </rss>';
 
 file_put_contents('rss.xml', $rss_file);
