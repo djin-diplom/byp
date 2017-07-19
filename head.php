@@ -3,10 +3,14 @@ if ($route) {//Переключатель заголовков
 	$title = 'Новости Беларуси - Белорусские новости - Новости Белоруссии';
 	$description = 'Новости Беларуси - Белорусские новости - Новости Белоруссии - Республика Беларусь - Минск';
 	$keys = 'Новости Беларуси - Белорусские новости - Новости Белоруссии - Республика Беларусь - Минск';
+    $url_og = $site_name;
+    $url_og_picture = $site_name."/img/metro.jpg";
 } else {
 	$title = $page['teme'];
 	$description = $page['description'];
 	$keys = $page['keys'];
+    $url_og = $page['url'];
+    $url_og_picture = str_replace('news', 'pictures', $page['url'])."/img_1.jpg";
 }
 ?>
 <meta name="yandex-verification" content="08c2ed06216b74b4" />
@@ -22,10 +26,15 @@ if ($route) {//Переключатель заголовков
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta name="description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" >
 	<meta name="keywords" content="<?php echo $site_name; ?> :: <?php echo $keys; ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo $main_name; ?>/news/">
-    <meta property="og:title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>">
-	<meta property="og:description" content="<?php echo $site_name; ?> :: <?php echo $description ?>">
+
+<meta property="og:title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>" />
+<meta property="og:description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" />
+<meta property="og:url" content="<?php echo $site_name; ?><?php echo $url_og; ?>" />
+<meta property="og:image" content="<?php echo $site_name; ?><?php echo $url_og_picture; ?>" />
+
+<meta name="title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>" />
+<link rel="image_src" href="<?php echo $site_name; ?><?php echo $url_og_picture; ?>" />
+
 
 
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $main_name; ?>/images.ico">
