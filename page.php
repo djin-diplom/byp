@@ -25,10 +25,11 @@
 	   <div class="pluso" data-background="#ebebeb" data-options="medium,round,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,livejournal,email">
 
 	   </div><br>
-	   <p><a target="_blank" href="<?php echo $page['url_ext']; ?>">Источник новости.</a></p>
+
 		<p><?php echo nl2br($page['text']); ?></p>
 <p><center></p>
 <?php echo $page['url_frame']; ?>
+	   <p><a target="_blank" href="<?php echo $page['url_ext']; ?>">Источник</a></p>
 		<p><a target="_blank" href="<?php echo $main_name; ?><?php echo $page['url_int']; ?>"><?php echo $page['teme_int']; ?></a></p>
 
 
