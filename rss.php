@@ -1,6 +1,6 @@
 <?php $rss_file = '<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-    <channel>
+<channel>
         <title>
             '.$site_name.' :: Новости Беларуси - Белорусские новости - Новости Белоруссии - Республика Беларусь - Минск
         </title>
@@ -35,7 +35,7 @@ $rss_file = $rss_file.'
             <category>news</category>
             <pubDate>'.$n_l_date.'</pubDate>
             <description>'.$n_l_des.'</description> 
-        </item>';
+</item>';
 }
 
 $rss_file = $rss_file.'
