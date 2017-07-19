@@ -44,7 +44,7 @@ $rss = 0;
 
 switch($rubrika){
 	case 'rss.php': $rss = 1;//require("rss.php"); exit;
-		$nomer = 100;
+		$nomer = 15;
 		$rubrika = 'pastnews';
 		$keys_value = 'empty';
 		$keys = '';
