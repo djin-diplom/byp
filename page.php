@@ -5,7 +5,7 @@
 			<a href="<?php echo $main_name; ?><?php echo $page['url']; ?>" class="news__counter"><?php echo $page['comments']; ?></a>
 			<ul class="article__info">
 			    <li><?php echo $page['datetime']; ?></li>
-<li><span class="news__views"><?php echo rand(50, 3650);?><i class="icon-eye"></i></span></li>	
+<li><span class="news__views"><?php echo rand(50, 3650);?><i class="icon-eye"></i></span></li>
 			</ul>
 		</header>
 		<figure class="article__left article__photo">
