@@ -44,7 +44,7 @@ $rss = 0;
 
 switch($rubrika){
 	case 'rss': $rss = 1;
-		require("rss.php"); //создаем файл rss.xml
+		// //создаем файл rss.xml
 		$nomer = 20;
 		$rubrika = 'news';
 		$keys_value = 'empty';
@@ -155,6 +155,7 @@ while($row = mysqli_fetch_array($res))
 $total = $i;
 
 if($rss == 1) {
+	require("rss.php");
 	header('Location: '.$main_name.'/rss.xml');
 	//require("rss.xml");
 	//echo $rss_file;
