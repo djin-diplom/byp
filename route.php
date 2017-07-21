@@ -43,8 +43,6 @@ $nomer = 10;
 $rss = 0;
 
 switch($rubrika){
-	case 'vk': require_once("vk.php");
-	exit;
 	case 'rss': $rss = 1;
 		// //создаем файл rss.xml
 		$nomer = 20;
