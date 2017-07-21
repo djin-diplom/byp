@@ -2,7 +2,7 @@
 
 //откуда будем парсить информацию
 //$ParserPage = 'http://rumol.org/blizkie-dali-neladno-v-dome-porugaj-soseda/';
-$ParserPage = 'http://bypolit.org/rss';
+$ParserPage = 'http://rumol.org/feed';
 
 $mainContent = file_get_contents($ParserPage);
 
