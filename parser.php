@@ -6,7 +6,7 @@ $ParserPage = 'http://rumol.org/feed/';
 
 $mainContent = file_get_contents($ParserPage);
 
-$contentTitle = 2;
+$contentTitle = $mainContent;
 
 $url_mass = array();
 
@@ -18,14 +18,15 @@ while(!empty($contentTitle)) {
 	$EndWord = "</link>";
 	$LengthWord = 0;
 // Определяем позицию строки, до которой нужно все отрезать
-	//$contentTitle = substr($contentTitle, $pos_2);
-	$pos = strpos($contentTitle, $StartWord);
+ $pos = strpos($contentTitle, $StartWord);
+	if ($pos === false) break;
 
 
 //Отрезаем все, что идет до нужной нам позиции
 	$contentTitle = substr($contentTitle, $pos);
 
-	$mainContent = substr($contentTitle, $pos +1);
+	$pos_2 = strpos($contentTitle, $EndWord);
+	$mainContent = substr($contentTitle, $pos_2);
 
 	//echo '<br>'.$ParserPage.'<br>';
 
@@ -36,7 +37,7 @@ while(!empty($contentTitle)) {
 	$contentTitle = substr($contentTitle, $LengthWord, $pos);
 
 //если в тексте встречается текст, который нам не нужен, вырезаем его
-	$contentTitle = str_replace('entry-content clearfix">', '', $contentTitle);
+	//$contentTitle = str_replace('entry-content clearfix">', '', $contentTitle);
 //$contentTitle = str_replace('</h1','', $contentTitle);
 //$contentTitle = str_replace('<title','', $contentTitle);
 //$contentTitle = str_replace('<','', $contentTitle);
@@ -45,6 +46,7 @@ while(!empty($contentTitle)) {
 
 // выводим спарсенный текст.
 	//echo $contentTitle;
+
 	$url_mass[$i++] = $contentTitle;
 }
 
