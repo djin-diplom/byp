@@ -8,7 +8,7 @@ $accessToken = '867dacadec5d54b85f0c391c488ce7cd2d09d24422dfc239513d685032d070a3
 $vkAPI = new \BW\Vkontakte(['access_token' => $accessToken]);
 $publicID = '150640109';
 
-if ($vkAPI->postToPublic($publicID, "Привет Хабр!", getcwd().'/img/metro.jpg', ['вконтакте api', 'автопостинг', 'первые шаги'])) {
+if ($vkAPI->postToPublic($publicID, $teme, getcwd().$url_pic.'/img_1.jpg', [$description])) {
 
 echo "Ура! Всё работает, пост добавлен\n";
 

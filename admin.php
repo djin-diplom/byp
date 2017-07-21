@@ -100,6 +100,8 @@ $teme_int = $_POST["teme_int"];
 		move_uploaded_file($_FILES["filename_5"]["tmp_name"], $url_pic."/img_5.jpg");
 	}
 }
+if(!empty($_POST["post_vk"])) require_once('vk.php');
+
 ?>
 
 
@@ -142,6 +144,7 @@ $res = mysqli_query($link, $select);
     $url_frame = $row["url_frame"];
     $url_int = $row["url_int"];
     $teme_int = $row["teme_int"];
+	$post_vk = 0;
 
 } else {
 	$datetime = date("Y-m-d H:i:s");
@@ -159,10 +162,11 @@ $res = mysqli_query($link, $select);
 	$razdel = '';
 	$text = 'Текст';
 	$keys = 'Ключи, через, запятую';
-$url_ext = 'https://vz.ru';
-$url_frame = '';
-$url_int = '/news/';
-$teme_int = 'Другие новости по этой теме.';
+	$url_ext = 'https://vz.ru';
+	$url_frame = '';
+	$url_int = '/news/';
+	$teme_int = 'Другие новости по этой теме.';
+	$post_vk = 1;
 }
 ?>
 
@@ -193,7 +197,7 @@ echo '&lt;img_2img&gt;';?><br>
 <textarea style="width:200px; height:30px; border: 1px solid #cccccc;" 
 		name="datetime" type="text" ><?php echo $datetime; ?></textarea><br>
 		<textarea 	 name="id" type="text" ><?php echo $id; ?></textarea><br>
-		<textarea style="width:600px; height:25px; border: 1px solid #cccccc;" name="url" type="text" ><?php echo $url ?></textarea><br>	
+		<textarea style="width:600px; height:25px; border: 1px solid #cccccc;" name="url" type="text" ><?php echo $url; ?></textarea><br>
         <p>Добавить картинку (360х230, jpg, Главная)</p>
 		<input type="hidden" name="MAX_FILE_SIZE" value="60005005360">
         <input type="file" name="filename"><br><br>
@@ -201,6 +205,7 @@ echo '&lt;img_2img&gt;';?><br>
 		<input type="file" name="filename_3"><br><br>
 		<input type="file" name="filename_4"><br><br>
 		<input type="file" name="filename_5"><br><br>
+	<input type="hidden" name="post_vk" value="<?php echo $post_vk; ?>">
 		<input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить статью"/>
 		<br><br>
 </form>
