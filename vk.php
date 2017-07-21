@@ -6,7 +6,7 @@ require_once('vkontakte.php');
 
 $accessToken = '867dacadec5d54b85f0c391c488ce7cd2d09d24422dfc239513d685032d070a39c68a9f22d6dfd8692f16';
 $vkAPI = new \BW\Vkontakte(['access_token' => $accessToken]);
-$publicID = 'bypolit';
+$publicID = '150640109';
 
 if ($vkAPI->postToPublic($publicID, "Привет Хабр!", getcwd().'/habr.jpg', ['вконтакте api', 'автопостинг', 'первые шаги'])) {
 
