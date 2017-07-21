@@ -43,6 +43,7 @@ $nomer = 10;
 $rss = 0;
 
 switch($rubrika){
+	case 'parse': require("parse.php");
 	case 'rss': $rss = 1;
 		// //создаем файл rss.xml
 		$nomer = 20;
