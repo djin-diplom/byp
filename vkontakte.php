@@ -424,9 +424,9 @@ public 'created' => int 1402950212
         }
         foreach ($tags as $tag) {
 
-            $text .= ' #' .str_replace(', ', '_', $tag);
+            $text .= $tag;//' #' .str_replace(', ', '_', $tag);
         }
-        //$text = html_entity_decode($text);
+        $text = html_entity_decode($text);
 	    var_dump($response);
         $response = $this->api('wall.post',
             [
