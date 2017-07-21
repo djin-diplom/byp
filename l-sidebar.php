@@ -33,7 +33,13 @@
 										VK.Widgets.Group("vk_groups", {mode: 1}, 150640109);
 									</script>
 								</li>
-
+							</ul>
+							<ul>
+								<li><a class="twitter-timeline" href="https://twitter.com/BYPolit">Tweets by BYPolit</a>
+									<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</li>
+							</ul>
+							<ul>
 		                         <li><a class="icon-rss" href="<?php echo $main_name; ?>/rss">RSS</a></li>
 	                        </ul>
                         </div>
