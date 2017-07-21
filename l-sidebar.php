@@ -22,14 +22,20 @@
 				
 						
 						<div class="b subscription">
+							<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+
+							<!-- VK Widget -->
+							<div id="vk_groups"></div>
+							<script type="text/javascript">
+								VK.Widgets.Group("vk_groups", {mode: 1}, 150640109);
+							</script>
+							
 						    <h3 class="title">подписка</h3>
 							<ul>
-		                       <li><a class="icon-facebook-1" href="https://www.facebook.com/<?php echo $main_name_corot; ?>">facebook</a></li>
-		                      <li><a class="icon-video" href="https://www.youtube.com/user/<?php echo $main_name_corot; ?>video">youtube</a></li>
-		                       <li><a class="icon-twitter" href="https://twitter.com/<?php echo $main_name_corot; ?>">twitter</a></li>
-		                        <li><a class="icon-vk" href="https://vk.com/<?php echo $main_name_corot; ?>">vkontakte</a></li>
-		                       <li><a class="icon-odnoklassniki" href="https://ok.ru/<?php echo $main_name_corot; ?>">ok.ru</a></li>
-		                           <li><a class="icon-gplus" href="https://google.com/+<?php echo $main_name_corot; ?>org_news/">gplus</a></li>
+		                       <li><a class="icon-facebook-1" href="https://www.facebook.com/<?php echo $main_name_corot; ?>">Фейсбук</a></li>
+		                      <li><a class="icon-video" href="https://www.youtube.com/user/<?php echo $main_name_corot; ?>video">Ютуб</a></li>
+		                       <li><a class="icon-twitter" href="https://twitter.com/<?php echo $main_name_corot; ?>">Твиттер</a></li>
+		                        <li><a class="icon-vk" href="https://vk.com/<?php echo $main_name_corot; ?>">Вконтакте</a></li>
 		                         <li><a class="icon-rss" href="<?php echo $main_name; ?>/rss">RSS</a></li>
 	                        </ul>
                         </div>
