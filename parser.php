@@ -11,7 +11,7 @@ $contentTitle = $mainContent;
 $url_mass = array();
 
 $i = 0;
-while(!empty($contentTitle)) {
+while(true) {
 
 	$contentTitle = $mainContent;
 	$StartWord = "<link>";
