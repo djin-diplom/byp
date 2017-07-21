@@ -8,7 +8,7 @@ $accessToken = '867dacadec5d54b85f0c391c488ce7cd2d09d24422dfc239513d685032d070a3
 $vkAPI = new \BW\Vkontakte(['access_token' => $accessToken]);
 $publicID = '150640109';
 
-if ($vkAPI->postToPublic($publicID, $teme.$description.$main_name.'/'.$url_pic.'/img_1.jpg', getcwd().$main_name.'/'.$url_pic.'/img_1.jpg', [$keys])) {//if ($vkAPI->postToPublic($publicID, $teme.'\n'.$description, getcwd().$url_pic.'/img_1.jpg', [$description])) {
+if ($vkAPI->postToPublic($publicID, $url_pic, getcwd().'/'.$url_pic.'/img_1.jpg', [$description])) {//if ($vkAPI->postToPublic($publicID, $teme.'\n'.$description, getcwd().$url_pic.'/img_1.jpg', [$description])) {
 
 echo "Ура! Всё работает, пост добавлен\n";
 
