@@ -40,7 +40,7 @@
 								</li>
 							</ul>
 							<ul>
-		                         <li><a class="icon-rss" href="<?php echo $main_name; ?>/rss">RSS</a></li>
+		                         <li><h1><a class="icon-rss" href="<?php echo $main_name; ?>/rss">RSS</a></h1></li>
 	                        </ul>
                         </div>
 						<div class="b subscription_mail">
