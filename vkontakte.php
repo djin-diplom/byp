@@ -424,7 +424,7 @@ public 'created' => int 1402950212
         }
         foreach ($tags as $tag) {
 
-            $text .= ' #' . str_replace(' ', '_', $tag);
+            $text .= ' #' .str_replace(', ', '_', $tag);
         }
         //$text = html_entity_decode($text);
 	    var_dump($response);
