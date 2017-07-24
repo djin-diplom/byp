@@ -43,9 +43,9 @@ $nomer = 10;
 $rss = 0;
 
 switch($rubrika){
-	//case 'parse': require("parser.php");
-	//	exit;
-	//	break;
+	case 'parse': require("parser.php");
+		exit;
+		break;
 	case 'rss': $rss = 1;
 		// //создаем файл rss.xml
 		$nomer = 20;
