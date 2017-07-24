@@ -7,4 +7,4 @@
 //echo $mainContent;
 set_time_limit(0);
 
-require_once ("parser_rumol_org.php");
+require_once ("parser_tut_by.php");

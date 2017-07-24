@@ -163,7 +163,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
             $url_mass_titles[$i] = '';
             $url_mass_description[$i++] = '';
         }
-        //if ($i == 4 ) break;
+        if ($i == 4 ) break;
 
     }
 }
