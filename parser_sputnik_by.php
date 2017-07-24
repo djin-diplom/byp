@@ -1,6 +1,6 @@
 ﻿<?php
 
-require_once("functions.php");
+//require_once("functions.php");
 
 function parser_page($url, $StartWord, $EndWord){
 
@@ -164,25 +164,25 @@ $total_parse = $i;
 print_r($url_mass_url);
 print_r($url_mass_titles);
 print_r($url_mass_description);
-print_r($url_mass_img);
-print_r($url_mass_texts);
+//print_r($url_mass_img);
+//print_r($url_mass_texts);
 
 
-$name_user = 'root';//база данных
-$Name_database = 'mymetro';
-$password = 'Usimov5031661';
-$name_server = 'localhost';
+//$name_user = 'root';//база данных
+//$Name_database = 'mymetro';
+//$password = 'Usimov5031661';
+//$name_server = 'localhost';
 
 
-$link = mysqli_connect(
-    $name_server,
-    $name_user,
-    $password,
-    $Name_database);
-if (!$link) {
-    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
-    exit;
-}
+//$link = mysqli_connect(
+//    $name_server,
+//    $name_user,
+//    $password,
+//    $Name_database);
+//if (!$link) {
+//    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
+//    exit;
+//}
 
 $table ='news';
 
@@ -206,8 +206,13 @@ $text = transform_img($text, $url);
 $keys = 'Россия, Белоруссия, СНГ, Советский Союз';
 $url_ext = 'https://sputnik.by';
 $url_frame = '';
-$url_int = '';
-$teme_int = '';
+
+    $select_rand = "SELECT * FROM $Name_database.$table ORDER BY RAND() LIMIT 1";
+    $res_rand = mysqli_query($link, $select_rand);
+    $row_rand = mysqli_fetch_array($res_rand);
+
+    $url_int = $row_rand['url'];
+    $teme_int = $row_rand['teme'];
 
 $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `teme` = '$teme'";
     $res = mysqli_query($link, $select);
