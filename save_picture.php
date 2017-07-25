@@ -11,7 +11,7 @@ while($row = mysqli_fetch_array($res))
 	$filename2 = $filename.'img_2.jpg';
 	echo $filename2;
 	$image_smoll =  imagecreatefromjpeg($filename1);
-	imagejpeg($image_smoll, $filename2, 10);
+	imagejpeg($image_smoll, $filename2, 5);
 }
 
 //$filename11 = 'pictures/2017-2/07/25/1500988669/dom-plyushkina-i-buduar-posredi-goroda-kakie-otzyvy-ostavlyayut-turisty-o-vitebskih-gostinicah/img_1.jpg';

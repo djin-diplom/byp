@@ -284,9 +284,19 @@ $url_frame = '';
     $url_pic_site = trim($url_pic_site);
     $url_pic = "./pictures/" . $url_mass[2] . "/" . $url_mass[3] . "/" . $url_mass[4] . "/" . $url_mass[5] . $chpu_url;
 
+    $url_pic_temp = $url_pic;
+
     $url_pic = $url_pic . '/img_1.jpg';
 
     file_put_contents($url_pic, file_get_contents($url_pic_site));
+
+    $filename_sq = $url_pic_temp."/";
+    $filename1_sq = $filename_sq.'img_1.jpg';
+    //echo $filename1;
+    $filename2_sq = $filename_sq.'img_2.jpg';
+    //echo $filename2;
+    $image_smoll_sq =  imagecreatefromjpeg($filename1_sq);
+    imagejpeg($image_smoll_sq, $filename2_sq, 10);
 
 
 }
