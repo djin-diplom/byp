@@ -48,7 +48,10 @@ else $news_year_2 = 0;
 
 $keys_name = 'keys';
 
-$nomer = 10;
+$number_of_pages = 10;//константа
+
+$nomer = $number_of_pages;
+
 $rss = 0;
 
 switch($rubrika){
@@ -57,11 +60,11 @@ switch($rubrika){
 		break;
 	case 'rss': $rss = 1;
 		// //создаем файл rss.xml
-		$nomer = 20;
+		$nomer = 2*$number_of_pages;
 		$rubrika = 'news';
 		$keys_value = 'empty';
 		$keys = '';
-		$nomer_url = 10;
+		$nomer_url = $number_of_pages;
 		break;
 	    case 'delete': unset($_SESSION['name']); // или $_SESSION = array() для очистки всех данных сессии
 		session_destroy();
@@ -85,8 +88,8 @@ switch($rubrika){
 		$admin = true;
 	if (empty($nomer_url_mass[2])) $keys_value = 'empty';
 	else $keys_value = $nomer_url_mass[2];
-	if (!empty($nomer_url_mass[3]) and $nomer_url_mass[3] > 10) $nomer_url = $nomer_url_mass[3];
-	else $nomer_url = 10;
+	if (!empty($nomer_url_mass[3]) and $nomer_url_mass[3] > $number_of_pages) $nomer_url = $nomer_url_mass[3];
+	else $nomer_url = $number_of_pages;
 	if ($keys_value == 'empty') $keys = '';
 	else $keys = $keys_value;
 	$keys = translate_into_russian_pastnews($keys);
@@ -94,8 +97,8 @@ switch($rubrika){
 	break;
 	
 	case 'pastnews': $keys_value = $nomer_url_mass[2];
-	if ($nomer_url_mass[3] > 10) $nomer_url = $nomer_url_mass[3];
-	else $nomer_url = 10;
+	if ($nomer_url_mass[3] > $number_of_pages) $nomer_url = $nomer_url_mass[3];
+	else $nomer_url = $number_of_pages;
 	if ($keys_value == 'empty') $keys = '';
 	else $keys = $keys_value;
 	$keys = translate_into_russian_pastnews($keys);
@@ -111,8 +114,8 @@ switch($rubrika){
 	else {
 		$keys_value = $nomer_url_mass[2];
 	}
-	if ($nomer_url_mass[3] > 10) $nomer_url = $nomer_url_mass[3];
-	else $nomer_url = 10;
+	if ($nomer_url_mass[3] > $number_of_pages) $nomer_url = $nomer_url_mass[3];
+	else $nomer_url = $number_of_pages;
 	if ($keys_value == 'empty') $keys = '';
 	else $keys = $keys_value;
 	$keys = translate_into_russian($keys);
@@ -120,8 +123,8 @@ switch($rubrika){
 	break;
 	case 'topic': $keys_name = 'razdel';
 	$keys_value = $nomer_url_mass[2];
-	if ($nomer_url_mass[3] > 10) $nomer_url = $nomer_url_mass[3];
-	else $nomer_url = 10;
+	if ($nomer_url_mass[3] > $number_of_pages) $nomer_url = $nomer_url_mass[3];
+	else $nomer_url = $number_of_pages;
 	if ($keys_value == 'empty') $keys = '';
 	else $keys = $keys_value;
 	break;
@@ -129,14 +132,14 @@ switch($rubrika){
 	case 'news': $rubrika = 'pastnews';
 	$keys_value = 'empty';
 	$keys = '';
-	$nomer_url = 10;
+	$nomer_url = $number_of_pages;
 	break;
 
         default: header('Location: '.$main_name.'/news/');
         break;
 }
-$nomer_url_2 = $nomer_url - 10;
-$nomer_url_3 = $nomer_url + 10;
+$nomer_url_2 = $nomer_url - $number_of_pages;
+$nomer_url_3 = $nomer_url + $number_of_pages;
 
 if ($admin) $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `$keys_name` LIKE '%$keys%'";
 else $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE datetime > '2017-01-25 20:12:53' AND datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%'";

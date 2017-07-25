@@ -42,7 +42,7 @@
 		    <i class="icon-left"></i>прошлое
 		</a>
       <?php endif; ?>
-	  <?php if($nomer_url_2 >= 10) : ?>
+	  <?php if($nomer_url_2 >= $number_of_pages) : ?>
 		<a class="btn btn_archive" href="<?php echo $main_name; ?>/<?php echo $rubrika; ?>/<?php echo $keys_value; ?>/<?php echo $nomer_url_2; ?>">
 		    <i class="icon-calendar"></i>будущее
 	    </a>
