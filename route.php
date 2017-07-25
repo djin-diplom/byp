@@ -164,6 +164,7 @@ while($row = mysqli_fetch_array($res))
 {
 	$news_latest[$i]['datetime'] = $row['datetime'];
 	$news_latest[$i]['teme'] = $row['teme'];
+	$news_latest[$i]['razdel'] = $row['razdel'];
 	$news_latest[$i]['description'] = $row['description'];
 	$news_latest[$i]['comments'] = $row['comments'];
 	$news_latest[$i++]['url'] = $row['url'];

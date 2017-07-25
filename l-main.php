@@ -8,7 +8,7 @@
 		    <li>
 			    <a href="<?php echo $main_name; ?><?php echo $news_latest[$count]['url']; ?>">
 				<br>
-					<?php if($count == 100) :?>
+					<?php if( ($count % 4) == 0 or $news_latest[$i]['razdel'] != 'news_latest') :?>
 				    <div class="news__pic">
 					    <img src="<?php echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_1.jpg" 
 						alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
