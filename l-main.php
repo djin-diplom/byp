@@ -18,7 +18,7 @@
 						$image_smoll =  imagecreatefromjpeg($filename11);
 						$image_smoll = imagejpeg($image_smoll, NULL,50);
 						?>
-						<img src="<?php echo 'data:image/JPEG;base64,'.$image_smoll.'"'; ?>
+						<img src="<?php echo $image_smoll; ?>"
 							 alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
 					</div>
 					<?php endif; ?>
