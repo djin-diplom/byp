@@ -139,14 +139,14 @@ $nomer_url_2 = $nomer_url - 10;
 $nomer_url_3 = $nomer_url + 10;
 
 if ($admin) $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `$keys_name` LIKE '%$keys%'";
-else $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%'";
+else $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE datetime > '2017-01-25 20:12:53' AND datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%'";
 $res = mysqli_query($link, $select);
 $row = mysqli_fetch_row($res);
 $all_count = $row[0]; // всего записей по выборке
 
 
 if ($admin) $select = "SELECT * FROM $Name_database.$table WHERE `$keys_name` LIKE '%$keys%' ORDER BY datetime DESC LIMIT $nomer_url_2, $nomer";
-else $select = "SELECT * FROM $Name_database.$table WHERE datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%' ORDER BY datetime DESC LIMIT $nomer_url_2, $nomer";
+else $select = "SELECT * FROM $Name_database.$table WHERE datetime > '2017-01-25 20:12:53' AND datetime < '$datetime_site' AND `$keys_name` LIKE '%$keys%' ORDER BY datetime DESC LIMIT $nomer_url_2, $nomer";
 $res = mysqli_query($link, $select);
 
 //if ($nomer_url_2 == 0) $nomer_url_2 = 1;
