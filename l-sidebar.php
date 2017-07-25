@@ -9,7 +9,7 @@
 					<?php for($count = 0 ; $count <4; $count++): ?>
 					<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">
 					    <div class="opinion__pic">
-						    <img src="<?php echo str_replace('news', 'pictures', $lsidebar[$count]['url']); ?>/img_1.jpg"
+						    <img src="<?php echo str_replace('news', 'pictures', $lsidebar[$count]['url']); ?>/img_2.jpg"
 								 alt="<?php echo $lsidebar[$count]['teme']; ?>" width="120" height="76">
 						</div>
 						<div class="opinion__content"><strong class="news__title"><?php echo $lsidebar[$count]['teme']; ?></strong>
