@@ -13,6 +13,7 @@
 					    <!-- <img src="<?php //echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_1.jpg" -->
 						<?php
 						$filename11 = str_replace('news', 'pictures', $news_latest[$count]['url']).'/img_1.jpg';
+						echo $filename11;
 						$image_smoll =  imagecreatefromjpeg($filename11);
 						$image_smoll = imagejpeg($image_smoll, NULL,50);
 						?>
