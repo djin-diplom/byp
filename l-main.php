@@ -17,6 +17,7 @@
 						$filename11 = 'pictures/2017-2/07/25/1500988669/dom-plyushkina-i-buduar-posredi-goroda-kakie-otzyvy-ostavlyayut-turisty-o-vitebskih-gostinicah//img_1.jpg';
 						$image_smoll =  imagecreatefromjpeg($filename11);
 						$image_smoll = imagejpeg($image_smoll, NULL,50);
+						echo $image_smoll;
 						?>
 						<img src="<?php echo $image_smoll; ?>"
 							 alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
