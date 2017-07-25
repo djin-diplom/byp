@@ -1,6 +1,27 @@
 ﻿<?php
 
-//require_once("functions.php");
+require_once("functions.php");
+
+
+
+$name_user = 'root';//база данных
+$Name_database = 'mymetro';
+$password = 'Usimov5031661';
+$name_server = 'localhost';
+
+
+$link = mysqli_connect(
+    $name_server,
+    $name_user,
+    $password,
+    $Name_database);
+if (!$link) {
+    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
+    exit;
+}
+
+$table ='news';
+
 
 function parser_page($url, $StartWord, $EndWord){
 
@@ -56,12 +77,14 @@ $url_mass_titles = array();
 $url_mass_description = array();
 $url_mass_img = array();
 $url_mass_texts = array();
+$all_count = array();
 
 for($j = 0; $j < 4; $j++) {
     $mainContent = file_get_contents($ParserPage);
     $contentTitle = $mainContent;
 
     $i = 0;
+    $k = 0;
     while (true) {
         $contentTitle = $mainContent;
         switch($j) {
@@ -70,8 +93,8 @@ for($j = 0; $j < 4; $j++) {
                     $StartWord = "<pubDate>";
                     $EndWord = "</pubDate>";
                 } else {
-                    $StartWord = "<link>";
-                    $EndWord = "</link>";
+                    $StartWord = "<title>";
+                    $EndWord = "</title>";
                 }
                 break;
             case 1:
@@ -79,10 +102,11 @@ for($j = 0; $j < 4; $j++) {
                     $StartWord = "<pubDate>";
                     $EndWord = "</pubDate>";
                 } else {
-                    $StartWord = "<title>";
-                    $EndWord = "</title>";
+                    $StartWord = "<link>";
+                    $EndWord = "</link>";
                 }
                 break;
+
             case 2:
                 $StartWord = "<description>";
                 $EndWord = "</description>";
@@ -137,64 +161,70 @@ $contentTitle = str_replace('<link>','', $contentTitle);
         if($i != 0) {
             switch ($j) {
                 case 0:
-                    $url_mass_url[$i] = str_replace(' ','', trim($contentTitle));
-                    $temp_url = $url_mass_url[$i];
-                    // Определяем позицию строки <p>, до которой нужно все отрезать
-                    $text_temp_2 = strip_tags(parser_page($temp_url, "article_body", "</div>"),'<p><img>');
-                    $pos_text = strpos($text_temp_2, '<p>');
-                    $text_temp_2 = substr($text_temp_2, $pos_text);
-                    $url_mass_texts[$i++] = str_replace('TUT.BY','BYPolit.org', $text_temp_2);
-                    //$url_mass_img[$i++] = parser_page($contentTitle, "featured-image", "class=");
+                    $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `teme` = '$contentTitle'";
+                    $res = mysqli_query($link, $select);
+                    $row = mysqli_fetch_row($res);
+                    $all_count[$i] = $row[0]; // всего записей по выборке
+                    //echo $all_count;
+
+                    if ($all_count[$i] == 0) {
+                        $k++;
+                        $url_mass_titles[$k] = $contentTitle;
+                    }
+
                     break;
                 case 1:
-                    $url_mass_titles[$i++] = $contentTitle;
+                    if ($all_count[$i] == 0) {
+                        $k++;
+
+                        $url_mass_url[$k] = str_replace(' ', '', trim($contentTitle));
+                        $temp_url = $url_mass_url[$k];
+                        // Определяем позицию строки <p>, до которой нужно все отрезать
+                        $text_temp_2 = strip_tags(parser_page($temp_url, "article_body", "</div>"), '<p><img>');
+                        $pos_text = strpos($text_temp_2, '<p>');
+                        $text_temp_2 = substr($text_temp_2, $pos_text);
+                        $url_mass_texts[$k] = str_replace('TUT.BY', 'BYPolit.org', $text_temp_2);
+                        //$url_mass_img[$i] = parser_page($contentTitle, "featured-image", "class=");
+                    }
                     break;
+
                 case 2:
-                    $url_mass_description[$i++] = strip_tags($contentTitle, '<p>');
+                    if ($all_count[$i] == 0) {
+                        $k++;
+                        $contentTitle = str_replace('&#x3C;','<',$contentTitle);
+                        $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
+                        $url_mass_description[$k] = strip_tags($contentTitle, '<p>');
+                    }
                     break;
                 case 3:
-                    $url_mass_img[$i++] = $contentTitle;
+                    if ($all_count[$i] == 0) {
+                        $k++;
+                        $url_mass_img[$k] = $contentTitle;
+                    }
                     break;
             }
         } else {
-            $url_mass_url[$i] = '';
-            $url_mass_texts[$i] = '';
-            $url_mass_img[$i] = '';
-            $url_mass_titles[$i] = '';
-            $url_mass_description[$i++] = '';
+            $url_mass_url[0] = '';
+            $url_mass_texts[0] = '';
+            $url_mass_img[0] = '';
+            $url_mass_titles[0] = '';
+            $url_mass_description[0] = '';
         }
-        if ($i == 4 ) break;
+        $i++;
+        if ($k == 3 ) break;
 
     }
 }
 
-$total_parse = $i;
+$total_parse = $k + 1;
 //echo $total_parse;
 
 print_r($url_mass_url);
 print_r($url_mass_titles);
 print_r($url_mass_description);
-//print_r($url_mass_img);
-//print_r($url_mass_texts);
+print_r($url_mass_img);
+print_r($url_mass_texts);
 
-
-//$name_user = 'root';//база данных
-//$Name_database = 'mymetro';
-//$password = 'Usimov5031661';
-//$name_server = 'localhost';
-
-
-//$link = mysqli_connect(
-//    $name_server,
-//    $name_user,
-//    $password,
-//    $Name_database);
-//if (!$link) {
-//    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
-//    exit;
-//}
-
-$table ='news';
 
 for($k = 1; $k < $total_parse; $k++) {
 
@@ -224,14 +254,8 @@ $url_frame = '';
     $url_int = $row_rand['url'];
     $teme_int = $row_rand['teme'];
 
-$select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `teme` = '$teme'";
-    $res = mysqli_query($link, $select);
-    $row = mysqli_fetch_row($res);
-    $all_count = $row[0]; // всего записей по выборке
-    echo $all_count;
 
 
-   if ($all_count == 0) {
     $insert = "INSERT INTO $Name_database.$table (`id`, `datetime`, `teme`, `description`, `razdel`, `url`, `comments`, `text`, `keys`, `url_ext`, `url_frame`, `url_int`, `teme_int`) 
 	VALUES ($id,'$datetime','$teme','$description','$razdel','$url',$comments,'$text','$keys','$url_ext','$url_frame','$url_int','$teme_int')";
 
@@ -262,5 +286,5 @@ $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `teme` = '$teme'";
 
     file_put_contents($url_pic, file_get_contents($url_pic_site));
 
-}
+
 }
