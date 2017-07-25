@@ -40,7 +40,8 @@ $rubrika = $nomer_url_mass[1];
 if (!empty($nomer_url_mass[2])) $news_year = $nomer_url_mass[2];
 else $news_year = '2017-0';
 $news_year_mass = explode ( '-', $news_year);
-$news_year_2 = $news_year_mass[1];
+if (!empty($news_year_mass[1])) $news_year_2 = $news_year_mass[1];
+else $news_year = '2017-0';
 
 
 
