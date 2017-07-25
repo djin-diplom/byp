@@ -181,10 +181,10 @@ $contentTitle = str_replace('<link>','', $contentTitle);
                         $url_mass_url[$k] = str_replace(' ', '', trim($contentTitle));
                         $temp_url = $url_mass_url[$k];
                         // Определяем позицию строки <p>, до которой нужно все отрезать
-                        $text_temp_2 = strip_tags(parser_page($temp_url, "article_body", "</div>"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong>');
+                        $text_temp_2 = strip_tags(parser_page($temp_url, "article_body", "</div>"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
                         $pos_text = strpos($text_temp_2, '<p>');
                         $text_temp_2 = substr($text_temp_2, $pos_text);
-                        $text_temp_2 = strip_tags($text_temp_2, '<img><frame><figure><figcaption><h1><h2><h3><strong>');
+                        $text_temp_2 = strip_tags($text_temp_2, '<img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
                         $url_mass_texts[$k] = str_replace('TUT.BY', 'BYPolit.org', $text_temp_2);
                         //$url_mass_img[$i] = parser_page($contentTitle, "featured-image", "class=");
                     }
