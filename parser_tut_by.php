@@ -1,24 +1,24 @@
 ﻿<?php
 
-require_once("functions.php");
+//require_once("functions.php");
 
 
 
-$name_user = 'root';//база данных
-$Name_database = 'mymetro';
-$password = 'Usimov5031661';
-$name_server = 'localhost';
+//$name_user = 'root';//база данных
+//$Name_database = 'mymetro';
+//$password = 'Usimov5031661';
+//$name_server = 'localhost';
 
 
-$link = mysqli_connect(
-    $name_server,
-    $name_user,
-    $password,
-    $Name_database);
-if (!$link) {
-    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
-    exit;
-}
+//$link = mysqli_connect(
+//    $name_server,
+//    $name_user,
+//    $password,
+//    $Name_database);
+//if (!$link) {
+//    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
+//    exit;
+//}
 
 $table ='news';
 
@@ -222,8 +222,8 @@ $total_parse = $k + 1;
 print_r($url_mass_url);
 print_r($url_mass_titles);
 print_r($url_mass_description);
-print_r($url_mass_img);
-print_r($url_mass_texts);
+//print_r($url_mass_img);
+//print_r($url_mass_texts);
 
 
 for($k = 1; $k < $total_parse; $k++) {
