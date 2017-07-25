@@ -82,6 +82,13 @@ $teme_int = $_POST["teme_int"];
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4]."/".$id, 0755);
 	@mkdir($url_pic, 0755);
     move_uploaded_file($_FILES["filename"]["tmp_name"], $url_pic."/img_1.jpg");
+		$filename_sq = $url_pic."/";
+		$filename1_sq = $filename_sq.'img_1.jpg';
+		//echo $filename1;
+		$filename2_sq = $filename_sq.'img_2.jpg';
+		//echo $filename2;
+		$image_smoll_sq =  imagecreatefromjpeg($filename1_sq);
+		imagejpeg($image_smoll_sq, $filename2_sq, 10);
     }
 	if(is_uploaded_file($_FILES["filename_2"]["tmp_name"]))
 	{
