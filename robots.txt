@@ -9,7 +9,9 @@ Disallow: /searchnews/
 Disallow: /topic/
 
 Disallow: /delete/
+
+Disallow: /news/2017-2/
   
 Host: bypolit.org
  
-Sitemap: http://bypolit.org/sitemap.xml
+Sitemap: https://bypolit.org/sitemap.xml
