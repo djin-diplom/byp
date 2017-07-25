@@ -26,7 +26,10 @@
 
 	   </div><br>
 	   <p><a target="_blank" href="<?php echo $page['url_ext']; ?>">Источник</a></p><br>
-		<p><?php echo $page['text'];//nl2br($page['text']); ?></p>
+		<?php
+			if($news_year_2 == 0) echo '<p>'.nl2br($page['text']).'</p>';
+			else echo $page['text'];
+			?>
 <p><center></p>
 <?php echo $page['url_frame']; ?>
 
