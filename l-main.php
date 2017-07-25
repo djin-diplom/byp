@@ -8,10 +8,16 @@
 		    <li>
 			    <a href="<?php echo $main_name; ?><?php echo $news_latest[$count]['url']; ?>">
 				<br>
-					<?php if( ($count % 4) == 0 or $news_latest[$count]['razdel'] != 'news_latest') :?>
+					<?php if( ($count % 5) == 0 or $news_latest[$count]['razdel'] != 'news_latest') :?>
 				    <div class="news__pic">
-					    <img src="<?php echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_1.jpg" 
-						alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
+					    <!-- <img src="<?php //echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_1.jpg" -->
+						<?php
+						$filename11 = str_replace('news', 'pictures', $news_latest[$count]['url']).'/img_1.jpg';
+						$image_smoll =  imagecreatefromjpeg($filename11);
+						$image_smoll = imagejpeg($image_smoll, NULL,50);
+						?>
+						<img src="<?php echo 'data:image/gif;base64,'.$image_smoll.'"'; ?>
+							 alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
 					</div>
 					<?php endif; ?>
 					<span class="news__time"><?php echo $news_latest[$count]['datetime']; ?></span>
