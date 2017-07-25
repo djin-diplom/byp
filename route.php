@@ -48,7 +48,7 @@ else $news_year_2 = 0;
 
 $keys_name = 'keys';
 
-$number_of_pages = 10;//константа
+$number_of_pages = 50;//константа
 
 $nomer = $number_of_pages;
 
