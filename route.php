@@ -55,6 +55,9 @@ $nomer = $number_of_pages;
 $rss = 0;
 
 switch($rubrika){
+	case 'save': require("save_picture.php");
+		exit;
+		break;
 	case 'parse': require("parser.php");
 		exit;
 		break;
