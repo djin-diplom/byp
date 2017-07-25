@@ -26,7 +26,7 @@
 
 	   </div><br>
 	   <p><a target="_blank" href="<?php echo $page['url_ext']; ?>">Источник</a></p><br>
-		<p><?php echo nl2br($page['text']); ?></p>
+		<p><?php echo $page['text'];//nl2br($page['text']); ?></p>
 <p><center></p>
 <?php echo $page['url_frame']; ?>
 
