@@ -8,12 +8,12 @@
 		    <li>
 			    <a href="<?php echo $main_name; ?><?php echo $news_latest[$count]['url']; ?>">
 				<br>
-					<?php if( ($count % 5) == 0 or $news_latest[$count]['razdel'] != 'news_latest') :?>
+					
 				    <div class="news__pic">
 					    <img src="<?php echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_2.jpg"
 						alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
 					</div>
-					<?php endif; ?>
+
 					<span class="news__time"><?php echo $news_latest[$count]['datetime']; ?></span>
 					<strong class="news__title"><?php echo $news_latest[$count]['teme']; ?></strong>
 			    </a>
