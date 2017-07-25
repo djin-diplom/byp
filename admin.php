@@ -88,7 +88,7 @@ $teme_int = $_POST["teme_int"];
 		$filename2_sq = $filename_sq.'img_2.jpg';
 		//echo $filename2;
 		$image_smoll_sq =  imagecreatefromjpeg($filename1_sq);
-		imagejpeg($image_smoll_sq, $filename2_sq, 7);
+		imagejpeg($image_smoll_sq, $filename2_sq, 2);
     }
 	if(is_uploaded_file($_FILES["filename_2"]["tmp_name"]))
 	{
