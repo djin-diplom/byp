@@ -73,26 +73,33 @@ function parser_page($url, $StartWord, $EndWord){
 
 }
 
+$timer = 0;
 $keys_temp = 'мир, Белоруссия, Россия';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/world.rss'; //мир, Белоруссия, Россия
 require ("parser_tut_by.php");
 
+$timer = 3;
 $keys_temp = 'политика';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/society.rss'; //политика, Белоруссия
 require ("parser_tut_by.php");
 
+
+$timer = 6;
 $keys_temp = 'экономика';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/economics.rss'; // экономика, Белоруссия
 require ("parser_tut_by.php");
 
+
+$timer = 9;
 $keys_temp = 'экономика, Белоруссия';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/finance.rss';//экономика, Белоруссия
 require ("parser_tut_by.php");
 
+$timer = 12;
 $keys_temp = 'наука, армия';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/it.rss';// наука, армия
