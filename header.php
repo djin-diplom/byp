@@ -26,7 +26,7 @@
 			    <?php for($count = 0 ; $count <3; $count++): ?>
         			<li class="header__topnews_multiline header__topnews_mid">
                         <a href="<?php echo $main_name; ?><?php echo $header[$count]['url']; ?>">
-                            <img src="<?php echo str_replace('news', 'pictures', $header[$count]['url']); ?>/img_2.jpg" width="228" height="76" />
+                            <img src="<?php echo str_replace('news', 'pictures', $header[$count]['url']); ?>/img_1_2.jpg" width="228" height="76" />
 							<span><?php echo $header[$count]['teme']; ?></span>
                         </a>
                     </li>

@@ -10,7 +10,7 @@
 				<br>
 					
 				    <div class="news__pic">
-					    <img src="<?php echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_2.jpg"
+					    <img src="<?php echo str_replace('news', 'pictures', $news_latest[$count]['url']); ?>/img_1_2.jpg"
 						alt="<?php echo $news_latest[$count]['teme']; ?>" width="360" />
 					</div>
 

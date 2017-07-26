@@ -8,7 +8,7 @@ while($row = mysqli_fetch_array($res))
 	$filename = str_replace('/news', 'pictures', $row['url']);
 	$filename1 = $filename.'img_1.jpg';
 	echo $filename1;
-	$filename2 = $filename.'img_2.jpg';
+	$filename2 = $filename.'img_1_2.jpg';
 	echo $filename2;
 	$image_smoll =  imagecreatefromjpeg($filename1);
 	imagejpeg($image_smoll, $filename2, 5);
