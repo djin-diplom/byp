@@ -85,7 +85,7 @@ $teme_int = $_POST["teme_int"];
 		$filename_sq = $url_pic."/";
 		$filename1_sq = $filename_sq.'img_1.jpg';
 		//echo $filename1;
-		$filename2_sq = $filename_sq.'img_2.jpg';
+		$filename2_sq = $filename_sq.'img_1_2.jpg';
 		//echo $filename2;
 		$image_smoll_sq =  imagecreatefromjpeg($filename1_sq);
 		imagejpeg($image_smoll_sq, $filename2_sq, 10);
