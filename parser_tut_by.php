@@ -1,73 +1,10 @@
 ﻿<?php
 
-//require_once("functions.php");
-
-
-
-//$name_user = 'root';//база данных
-//$Name_database = 'mymetro';
-//$password = 'Usimov5031661';
-//$name_server = 'localhost';
-
-
-//$link = mysqli_connect(
-//    $name_server,
-//    $name_user,
-//    $password,
-//    $Name_database);
-//if (!$link) {
-//    printf("Ошибка в базе данных: %s\n", mysqli_connect_error());
-//    exit;
-//}
-
-$table ='news';
-
-
-function parser_page($url, $StartWord, $EndWord){
 
 //откуда будем парсить информацию
-//$ParserPage = 'http://rumol.org/blizkie-dali-neladno-v-dome-porugaj-soseda/';
-    $ParserPage_feed = $url;
+//$ParserPage = 'https://news.tut.by/rss/all.rss';
 
-    $mainContent_feed = file_get_contents($ParserPage_feed);
-    $contentTitle_feed = $mainContent_feed;
-    $StartWord_feed = $StartWord;//"entry-content clearfix";
-    $EndWord_feed = $EndWord;//"crp_related";
-    $LengthWord_feed = 0;
-// Определяем позицию строки, до которой нужно все отрезать
-    $pos_feed = strpos($contentTitle_feed, $StartWord_feed);
-
-//Отрезаем все, что идет до нужной нам позиции
-    $contentTitle_feed = substr($contentTitle_feed, $pos_feed);
-
-// Точно таким же образом находим позицию конечной строки
-    $pos_feed = strpos($contentTitle_feed, $EndWord_feed);
-
-// Отрезаем нужное количество символов от нулевого
-    $contentTitle_feed = substr($contentTitle_feed, $LengthWord_feed, $pos_feed);
-
-//если в тексте встречается текст, который нам не нужен, вырезаем его
-    //$contentTitle_feed = str_replace('entry-content clearfix">','', $contentTitle_feed);
-    //$contentTitle_feed = str_replace('<div class="','', $contentTitle_feed);
-    //$contentTitle_feed = str_replace('featured-image">','', $contentTitle_feed);
-    //$contentTitle_feed = str_replace('src=','', $contentTitle_feed);
-    //$contentTitle_feed = str_replace('<img width="800" height="445"','', $contentTitle_feed);
-    //$contentTitle_feed = str_replace('©','', $contentTitle_feed);
-    //$contentTitle_feed = str_replace('"','', $contentTitle_feed);
-//$contentTitle = str_replace('</h1','', $contentTitle);
-//$contentTitle = str_replace('<title','', $contentTitle);
-//$contentTitle = str_replace('<','', $contentTitle);
-//$contentTitle = stripslashes($contentTitle);
-//$contentTitle = htmlspecialchars($contentTitle);
-
-// выводим спарсенный текст.
-    return $contentTitle_feed;
-
-}
-
-//откуда будем парсить информацию
-$ParserPage = 'https://news.tut.by/rss/all.rss';
- //require_once("file_xml/sput.php");
+//require_once("file_xml/sput.php");
 //$ParserPage = $sput;
 
 
@@ -218,7 +155,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
             $url_mass_description[0] = '';
         }
         $i++;
-        if ($k == 10 ) break;
+        if ($k == 5 ) break;
 
     }
 }
@@ -250,7 +187,7 @@ $description = $url_mass_description[$k];
 $razdel = 'news_latest';
 $text = $url_mass_texts[$k];
 $text = transform_img($text, $url);
-$keys = 'Россия, Белоруссия, СНГ, Советский Союз';
+$keys = $keys_temp;
 $url_ext = 'https://www.tut.by';
 $url_frame = '';
 
