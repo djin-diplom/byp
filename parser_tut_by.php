@@ -128,6 +128,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
                         $text_temp_2 = str_replace('</figure>', '</figure></br>', $text_temp_2);
                         $text_temp_2 = str_replace('Читайте также:', '', $text_temp_2);
                         $text_temp_2 = str_replace('Читайте также', '', $text_temp_2);
+                        $text_temp_2 = str_replace('FINANCE.', '', $text_temp_2);
                         $url_mass_texts[$k] = str_replace('TUT.BY', 'BYPolit.org', $text_temp_2);
                         //$url_mass_img[$i] = parser_page($contentTitle, "featured-image", "class=");
                     }
