@@ -155,7 +155,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
             $url_mass_description[0] = '';
         }
         $i++;
-        if ($k == 24 ) break;
+        if ($k == 12 ) break;
 
     }
 }
