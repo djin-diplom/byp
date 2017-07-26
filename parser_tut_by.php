@@ -155,7 +155,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
             $url_mass_description[0] = '';
         }
         $i++;
-        if ($k == 5 ) break;
+        if ($k == 3 ) break;
 
     }
 }
