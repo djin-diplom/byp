@@ -71,16 +71,17 @@ $teme_int = $_POST["teme_int"];
 	if (!empty($url_mass[6])) $chpu_url ="/".$url_mass[6];
 	else $url_mass[6] = '';
 	$url_pic = "pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4]."/".$url_mass[5].$chpu_url;
-    if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
-    {
-    // Если файл загружен успешно, перемещаем его
-    // из временной директории в конечную
-	// Создаем папки
 	@mkdir("pictures/".$url_mass[2], 0755);
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3], 0755);
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4], 0755);
 	@mkdir("pictures/".$url_mass[2]."/".$url_mass[3]."/".$url_mass[4]."/".$id, 0755);
 	@mkdir($url_pic, 0755);
+    if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
+    {
+    // Если файл загружен успешно, перемещаем его
+    // из временной директории в конечную
+	// Создаем папки
+
     move_uploaded_file($_FILES["filename"]["tmp_name"], $url_pic."/img_1.jpg");
 		$filename_sq = $url_pic."/";
 		$filename1_sq = $filename_sq.'img_1.jpg';
