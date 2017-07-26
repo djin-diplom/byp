@@ -206,7 +206,7 @@ echo '&lt;img_2img&gt;';?><br>
 		name="datetime" type="text" ><?php echo $datetime; ?></textarea><br>
 		<textarea 	 name="id" type="text" ><?php echo $id; ?></textarea><br>
 		<textarea style="width:600px; height:25px; border: 1px solid #cccccc;" name="url" type="text" ><?php echo $url; ?></textarea><br>
-        <p>Добавить картинку (360х230, jpg, Главная)</p>
+        <p>Добавить картинки (360х230, jpg, Главная)</p>
 		<input type="hidden" name="MAX_FILE_SIZE" value="60005005360">
         <input type="file" name="filename"><br><br>
 		<input type="file" name="filename_2"><br><br>
