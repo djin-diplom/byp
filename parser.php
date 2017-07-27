@@ -87,6 +87,13 @@ $keys_temp = 'мир, Белоруссия, Россия, политика, эк
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/all.rss'; //мир, Белоруссия, Россия
 require ("parser_tut_by.php");
+    $hours++;
+    ?>
+    <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/parse">
+        <input type="text" name="hours" value="<?php echo $hours; ?>"><br>
+        <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг c задержкой (ввести интервал задержки в часах)"/>
+    </form>
+    <?php
 }
 
 //$timer = 3;
