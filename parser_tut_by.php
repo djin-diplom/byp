@@ -194,7 +194,17 @@ $keys = $keys_temp;
 $url_ext = 'https://www.tut.by';
 $url_frame = '';
 
-   $select_rand = "SELECT * FROM $Name_database.$table WHERE datetime > '2017-01-25 20:12:53' ORDER BY RAND() LIMIT 1";
+    $temp_time_ogr = '2017-01-25 20:12:53';
+    $select_rand = "SELECT COUNT(*) FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' ";
+    $res = mysqli_query($link, $select_rand);
+    $row = mysqli_fetch_row($res);
+    $all_count_temp_1 = $row[0] - 70; // всего записей по выборке
+
+    $nomer_zap = rand(0,$all_count_temp_1);
+
+    $select_rand = "SELECT * FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' LIMIT $nomer_zap, 1";
+
+   //$select_rand = "SELECT * FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' ORDER BY RAND() LIMIT 1";
     $res_rand = mysqli_query($link, $select_rand);
     $row_rand = mysqli_fetch_array($res_rand);
 
