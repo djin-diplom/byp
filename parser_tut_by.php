@@ -194,12 +194,12 @@ $keys = $keys_temp;
 $url_ext = 'https://www.tut.by';
 $url_frame = '';
 
-   //$select_rand = "SELECT * FROM $Name_database.$table WHERE datetime > '2017-01-25 20:12:53' ORDER BY RAND() LIMIT 1";
-    //$res_rand = mysqli_query($link, $select_rand);
-    //$row_rand = mysqli_fetch_array($res_rand);
+   $select_rand = "SELECT * FROM $Name_database.$table WHERE datetime > '2017-01-25 20:12:53' ORDER BY RAND() LIMIT 1";
+    $res_rand = mysqli_query($link, $select_rand);
+    $row_rand = mysqli_fetch_array($res_rand);
 
-    $url_int = '';//$row_rand['url'];
-    $teme_int = '';//$row_rand['teme'];
+    $url_int = $row_rand['url'];
+    $teme_int = $row_rand['teme'];
 
 
 
