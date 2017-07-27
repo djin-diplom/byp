@@ -158,7 +158,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
             $url_mass_description[0] = '';
         }
         $i++;
-        if ($k == 21 ) break;
+        if ($k == 5 ) break;
 
     }
 }
@@ -175,7 +175,7 @@ print_r($url_mass_description);
 
 for($k = 1; $k < $total_parse; $k++) {
 
-    $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20+1100)." minutes"));
+    $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20)." minutes"));
     $id = time()+($k);
     $datetime_mass_1 = explode(' ', $datetime);
     $datetime_mass_2 = explode('-', $datetime_mass_1[0]);
