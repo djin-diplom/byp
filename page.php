@@ -85,7 +85,7 @@
 	    <?php else:?>
 			<div class="commentFormContainer" id="commentformcontainer">
 
-				<div class="comments__head">Завести логин и пароль
+				<div class="comments__head">Логин и пароль
 					<button type="button" id="commentFormClose" class="icon-cancel" style="float: right; display: none;"></button>
 				</div>
 
@@ -94,17 +94,17 @@
 					    <form method="POST" action="<?php echo $main_name; ?><?php echo $page['url']; ?>">
 					    <div class="comments__input is-marked">
 						<i class="icon-comment"></i>
-						<label for="in_author">Имя</label>
+						<label for="in_author">Логин</label>
 						<input type="text" name="login" id="in_author" maxlength="20">
 					    </div>
 					    <div class="comments__input">
 						<label for="in_email">Пароль</label>
 						<input type="password" name="pass" maxlength="20">
-						<span class="comments__info-text">Запомните пароль и логин для последующей аунтификации</span>
+						<span class="comments__info-text">Запомните логин и пароль для последующего входа</span>
 						<span class="comments__info-text"><b></b></span>
 					    </div>
 							<div class="comments__input">
-							<button class="comments__submit" id="commentFormSubmit">Войти</button>
+							<button class="comments__submit" id="commentFormSubmit">Войти или зарегистрироваться</button>
 								</div>
 						<form>
 
