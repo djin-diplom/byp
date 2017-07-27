@@ -79,27 +79,27 @@ echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/world.rss'; //мир, Белоруссия, Россия
 require ("parser_tut_by.php");
 
-$timer = 3;
-$keys_temp = 'политика';
-echo $keys_temp;
-$ParserPage = 'https://news.tut.by/rss/society.rss'; //политика, Белоруссия
-require ("parser_tut_by.php");
+//$timer = 3;
+//$keys_temp = 'политика';
+//echo $keys_temp;
+//$ParserPage = 'https://news.tut.by/rss/society.rss'; //политика, Белоруссия !!!!
+//require ("parser_tut_by.php");
 
 
-$timer = 6;
-$keys_temp = 'экономика';
+//$timer = 16;
+$keys_temp = 'экономика, политика';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/economics.rss'; // экономика, Белоруссия
 require ("parser_tut_by.php");
 
 
-$timer = 9;
+//$timer = 31;
 $keys_temp = 'экономика, Белоруссия';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/finance.rss';//экономика, Белоруссия
 require ("parser_tut_by.php");
 
-$timer = 12;
+//$timer = 12;
 $keys_temp = 'наука, армия';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/it.rss';// наука, армия
