@@ -158,7 +158,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
             $url_mass_description[0] = '';
         }
         $i++;
-        if ($k == 21 ) break;
+        if ($k == 6 ) break;
 
     }
 }
@@ -175,7 +175,7 @@ print_r($url_mass_description);
 
 for($k = 1; $k < $total_parse; $k++) {
 
-    $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20+1900)." minutes"));
+    $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20+$hours*60)." minutes"));
     $id = time()+($k);
     $datetime_mass_1 = explode(' ', $datetime);
     $datetime_mass_2 = explode('-', $datetime_mass_1[0]);
@@ -194,22 +194,22 @@ $keys = $keys_temp;
 $url_ext = 'https://www.tut.by';
 $url_frame = '';
 
-    //$temp_time_ogr = '2017-01-25 20:12:53';
-    //$select_rand = "SELECT COUNT(*) FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' ";
-    //$res_rand = mysqli_query($link, $select_rand);
-    //$row_rand = mysqli_fetch_row($res_rand);
-    //$all_count_temp_1 = $row_rand[0] - 70; // всего записей по выборке
+    $temp_time_ogr = '2017-01-25 20:12:53';
+    $select_rand = "SELECT COUNT(*) FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' ";
+    $res_rand = mysqli_query($link, $select_rand);
+    $row_rand = mysqli_fetch_row($res_rand);
+    $all_count_temp_1 = $row_rand[0] - 70; // всего записей по выборке
 
-    //$nomer_zap = rand(0,$all_count_temp_1);
+    $nomer_zap = rand(0,$all_count_temp_1);
 
-    //$select_rand = "SELECT * FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' LIMIT $nomer_zap, 1";
+    $select_rand = "SELECT * FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' LIMIT $nomer_zap, 1";
 
    //$select_rand = "SELECT * FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' ORDER BY RAND() LIMIT 1";
-    //$res_rand = mysqli_query($link, $select_rand);
-    //$row_rand = mysqli_fetch_array($res_rand);
+    $res_rand = mysqli_query($link, $select_rand);
+    $row_rand = mysqli_fetch_array($res_rand);
 
-    $url_int = '';//$row_rand['url'];
-    $teme_int = '';//$row_rand['teme'];
+    $url_int = $row_rand['url'];
+    $teme_int = $row_rand['teme'];
 
 
 

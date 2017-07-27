@@ -73,10 +73,21 @@ function parser_page($url, $StartWord, $EndWord){
 
 }
 
+if (empty($_POST['hours'])) {
+    ?>
+    <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/parse">
+        <input type="text" name="hours" value="0">
+        <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг с номером"/>
+    </form>
+<?php
+
+} else {
+    $hours = $_POST['hours'];
 $keys_temp = 'мир, Белоруссия, Россия, политика, экономика';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/all.rss'; //мир, Белоруссия, Россия
 require ("parser_tut_by.php");
+}
 
 //$timer = 3;
 //$keys_temp = 'политика';
