@@ -196,9 +196,9 @@ $url_frame = '';
 
     $temp_time_ogr = '2017-01-25 20:12:53';
     $select_rand = "SELECT COUNT(*) FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' ";
-    $res = mysqli_query($link, $select_rand);
-    $row = mysqli_fetch_row($res);
-    $all_count_temp_1 = $row[0] - 70; // всего записей по выборке
+    $res_rand = mysqli_query($link, $select_rand);
+    $row_rand = mysqli_fetch_row($res_rand);
+    $all_count_temp_1 = $row_rand[0] - 70; // всего записей по выборке
 
     $nomer_zap = rand(0,$all_count_temp_1);
 
