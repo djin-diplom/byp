@@ -73,7 +73,6 @@ function parser_page($url, $StartWord, $EndWord){
 
 }
 
-$timer = 0;
 $keys_temp = 'мир, Белоруссия, Россия, политика, экономика';
 echo $keys_temp;
 $ParserPage = 'https://news.tut.by/rss/all.rss'; //мир, Белоруссия, Россия

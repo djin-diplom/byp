@@ -175,9 +175,9 @@ print_r($url_mass_description);
 
 for($k = 1; $k < $total_parse; $k++) {
 
-    $datetime = date("Y-m-d H:i:s",strtotime("+".($timer*20+1500)." minutes"));
+    $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20+1500)." minutes"));
     $timer++;
-    $id = time()+($timer);
+    $id = time()+($k);
     $datetime_mass_1 = explode(' ', $datetime);
     $datetime_mass_2 = explode('-', $datetime_mass_1[0]);
     $year = $datetime_mass_2[0].'-2';
