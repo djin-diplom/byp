@@ -212,7 +212,7 @@ echo '&lt;img_2img&gt;';?><br>
 		<input type="file" name="filename_2"><br><br>
 		<input type="file" name="filename_3"><br><br>
 		<input type="file" name="filename_4"><br><br>
-	input type="file" name="filename_5"><br><br><
+	<input type="file" name="filename_5"><br><br>
 	<input type="hidden" name="post_vk" value="<?php echo $post_vk; ?>">
 		<input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить статью"/>
 		<br><br>
