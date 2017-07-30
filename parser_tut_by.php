@@ -108,8 +108,8 @@ $contentTitle = str_replace('<link>','', $contentTitle);
                     $all_count[$i] = $row[0]; // всего записей по выборке
 
                     if ($all_count[$i] == 0) {
-                        $id = time() + $i;
-                        $insert = "INSERT INTO $Name_database.$table_link (`id`, `link`) VALUES ($id,'$url_temp_5',)";
+                        $id = time() + ($i);
+                        $insert = "INSERT INTO $Name_database.$table_link (`id`, `url`) VALUES ($id,'$url_temp_5',)";
 
                         $k++;
                         $url_mass_url[$k] = $url_temp_5;
