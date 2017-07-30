@@ -109,7 +109,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
 
                     if ($all_count[$i] == 0) {
                         $id = time() + ($i);
-                        $insert = "INSERT INTO $Name_database.$table_link (`id`, `url`) VALUES ($id,'$url_temp_5',)";
+                        $insert = "INSERT INTO $Name_database.$table_link (`id`, `url`) VALUES ($id,'$url_temp_5')";
                         $result = mysqli_query($link, $insert);
                         if ($result = 'true'){
                             //echo "Информация занесена в базу данных";
