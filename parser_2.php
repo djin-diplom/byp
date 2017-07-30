@@ -1,8 +1,8 @@
 <?php
 
-$ParserPage = 'ttp://rumol.org/feed/'; //мир, Белоруссия, Россия
+$ParserPage = 'http://rumol.org/feed/'; //мир, Белоруссия, Россия
 
-$parse_file = "parser_tut_by.php";
+$parse_file = "parser_rumol_org.php";
 
 $name_parse = "parse_2";
 
