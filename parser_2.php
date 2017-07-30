@@ -2,4 +2,6 @@
 
 $ParserPage = 'http://rumol.org/feed/';
 
-echo $ParserPage;
+$mainContent = file_get_contents($ParserPage);
+
+echo $mainContent;
