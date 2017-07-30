@@ -1,7 +1,9 @@
 <?php
 
-$ParserPage = 'http://rumol.org/feed/';
+$ParserPage = 'ttp://rumol.org/feed/'; //мир, Белоруссия, Россия
 
-$mainContent = file_get_contents($ParserPage);
+$parse_file = "parser_tut_by.php";
 
-echo $mainContent;
+$name_parse = "parse_2";
+
+require_once("parse_all.php");
