@@ -15,6 +15,7 @@ $url_mass_description = array();
 $url_mass_img = array();
 $url_mass_texts = array();
 $all_count = array();
+$all_count_2 = array();
 
 for($j = 0; $j < 4; $j++) {
     $mainContent = file_get_contents($ParserPage);
@@ -25,16 +26,8 @@ for($j = 0; $j < 4; $j++) {
     while (true) {
         $contentTitle = $mainContent;
         switch($j) {
+
             case 0:
-                if ($i == 0) {
-                    $StartWord = "<pubDate>";
-                    $EndWord = "</pubDate>";
-                } else {
-                    $StartWord = "<title>";
-                    $EndWord = "</title>";
-                }
-                break;
-            case 1:
                 if ($i == 0) {
                     $StartWord = "<pubDate>";
                     $EndWord = "</pubDate>";
@@ -43,7 +36,15 @@ for($j = 0; $j < 4; $j++) {
                     $EndWord = "</link>";
                 }
                 break;
-
+            case 1:
+                if ($i == 0) {
+                    $StartWord = "<pubDate>";
+                    $EndWord = "</pubDate>";
+                } else {
+                    $StartWord = "<title>";
+                    $EndWord = "</title>";
+                }
+                break;
             case 2:
                 $StartWord = "<description>";
                 $EndWord = "</description>";
@@ -97,25 +98,21 @@ $contentTitle = str_replace('<link>','', $contentTitle);
         //echo $contentTitle;
         if($i != 0) {
             switch ($j) {
+
                 case 0:
-                    $select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `teme` = '$contentTitle'";
+                    $url_temp_5 = str_replace(' ', '', trim($contentTitle));
+
+                    $select = "SELECT COUNT(*) FROM $Name_database.$table_link WHERE `url` = '$url_temp_5'";
                     $res = mysqli_query($link, $select);
                     $row = mysqli_fetch_row($res);
                     $all_count[$i] = $row[0]; // всего записей по выборке
-                    //echo $all_count;
 
                     if ($all_count[$i] == 0) {
-                        $k++;
-                        $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
-                        $url_mass_titles[$k] = $contentTitle;
-                    }
+                        $id = time() + $i;
+                        $insert = "INSERT INTO $Name_database.$table_link (`id`, `link`) VALUES ($id,'$url_temp_5',)";
 
-                    break;
-                case 1:
-                    if ($all_count[$i] == 0) {
                         $k++;
-
-                        $url_mass_url[$k] = str_replace(' ', '', trim($contentTitle));
+                        $url_mass_url[$k] = $url_temp_5;
                         $temp_url = $url_mass_url[$k];
                         // Определяем позицию строки <p>, до которой нужно все отрезать
                         $text_temp_2 = strip_tags(parser_page($temp_url, "article_body", "</div>"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
@@ -133,7 +130,22 @@ $contentTitle = str_replace('<link>','', $contentTitle);
                         //$url_mass_img[$i] = parser_page($contentTitle, "featured-image", "class=");
                     }
                     break;
+                case 1:
 
+
+                    //$select = "SELECT COUNT(*) FROM $Name_database.$table WHERE `teme` = '$contentTitle'";
+                    //$res = mysqli_query($link, $select);
+                    // $row = mysqli_fetch_row($res);
+                    //$all_count[$i] = $row[0]; // всего записей по выборке
+                    //echo $all_count;
+
+                    if ($all_count[$i] == 0) {
+                        $k++;
+                        $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
+                        $url_mass_titles[$k] = $contentTitle;
+                    }
+
+                    break;
                 case 2:
                     if ($all_count[$i] == 0) {
                         $k++;

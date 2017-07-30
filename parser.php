@@ -29,6 +29,7 @@ set_time_limit(0);
 //}
 
 $table ='news';
+$table_link ='link';
 
 
 function parser_page($url, $StartWord, $EndWord){
