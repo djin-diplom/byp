@@ -47,7 +47,7 @@ function parser_page($url, $StartWord, $EndWord){
 
 //откуда будем парсить информацию
 //$ParserPage = 'http://rumol.org/blizkie-dali-neladno-v-dome-porugaj-soseda/';
-$ParserPage = 'http://rumol.org/feed';
+$ParserPage = 'http://rumol.org/feed/';
 
 
 
