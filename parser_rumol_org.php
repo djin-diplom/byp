@@ -76,6 +76,7 @@ for($j = 0; $j < 3; $j++) {
         $contentTitle = str_replace('впервые появилась','', $contentTitle);
         $contentTitle = str_replace('Запись ','', $contentTitle);
         $contentTitle = str_replace('  ','', $contentTitle);
+
         //$contentTitle = str_replace('Информационный портал Русь молодая','', $contentTitle);
         //$contentTitle = str_replace('впервые появилась','', $contentTitle);
         //$contentTitle = str_replace('Запись ','', $contentTitle);
@@ -122,10 +123,19 @@ for($j = 0; $j < 3; $j++) {
                         $text_temp_2 = str_replace('</figure>', '</figure></br>', $text_temp_2);
                         $text_temp_2 = str_replace('Читайте также:', '', $text_temp_2);
                         $text_temp_2 = str_replace('Читайте также', '', $text_temp_2);
-                        $text_temp_2 = str_replace('FINANCE.', '', $text_temp_2);
-                        $url_mass_texts[$k] = str_replace('TUT.BY', 'BYPolit.org', $text_temp_2);
+                        $text_temp_2 = str_replace('entry-content clearfix">', '', $text_temp_2);
+                        $text_temp_2 = str_replace('sizes', '', $text_temp_2);
+                        $url_mass_texts[$k] = str_replace('srcset', '', $text_temp_2);
                         //$url_mass_img[$i] = parser_page($contentTitle, "featured-image", "class=");
-                        $url_mass_img[$k] = parser_page($contentTitle, "featured-image", "class=");
+                        $temp_img_parse = parser_page($contentTitle, "featured-image", "class=");
+                        $temp_img_parse = str_replace('<div class="', '', $temp_img_parse);
+                        $temp_img_parse = str_replace('featured-image">', '', $temp_img_parse);
+                        $temp_img_parse = str_replace('src=', '', $temp_img_parse);
+                        $temp_img_parse = str_replace('<img width="800" height="445"', '', $temp_img_parse);
+                        $temp_img_parse = str_replace(' "', '', $temp_img_parse);
+                        $temp_img_parse = str_replace('"', '', $temp_img_parse);
+                        //$temp_img_parse = str_replace('srcset', '', $temp_img_parse);
+                        $url_mass_img[$k] = $temp_img_parse;
                     }
                     break;
                 case 1:
