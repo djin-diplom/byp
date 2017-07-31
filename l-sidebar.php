@@ -68,7 +68,7 @@
 							</div>
                          </div>
 				<div class="b opinion">
-					<h3 class="title"><a href="<?php echo $main_name; ?>/topic/l-sidebar/10">Это интересно</a></h3>
+					
 
 					<?php for($count = 4 ; $count <12; $count++): ?>
 						<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">
