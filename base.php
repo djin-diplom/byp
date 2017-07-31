@@ -50,7 +50,7 @@ while($row = mysqli_fetch_array($res))
 	$header[$i++]['url'] = $row['url'];
 }
 
-$select = "SELECT * FROM $Name_database.$table WHERE razdel = 'l-sidebar' AND datetime < '$datetime_site' ORDER BY datetime DESC LIMIT 4";
+$select = "SELECT * FROM $Name_database.$table WHERE razdel = 'l-sidebar' AND datetime < '$datetime_site' ORDER BY datetime DESC LIMIT 12";
 $res = mysqli_query($link, $select);
 
 $i = 0;

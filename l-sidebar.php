@@ -67,5 +67,21 @@
 								</form>
 							</div>
                          </div>
+				<div class="b opinion">
+					<h3 class="title"><a href="<?php echo $main_name; ?>/topic/l-sidebar/10">Это интересно</a></h3>
+
+					<?php for($count = 4 ; $count <12; $count++): ?>
+						<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">
+							<div class="opinion__pic">
+								<img src="<?php echo str_replace('news', 'pictures', $lsidebar[$count]['url']); ?>/img_1_2.jpg"
+									 alt="<?php echo $lsidebar[$count]['teme']; ?>" width="120" height="76">
+							</div>
+							<div class="opinion__content"><strong class="news__title"><?php echo $lsidebar[$count]['teme']; ?></strong>
+								<span class="opinion__author"><?php echo $lsidebar[$count]['description']; ?></span>
+							</div>
+						</a>
+					<?php   endfor ?>
+
+				</div>
 			</div>
 </div>
