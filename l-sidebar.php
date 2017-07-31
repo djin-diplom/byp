@@ -41,11 +41,11 @@
 							</ul>
 
                         </div>
-						
+
 				<div class="b opinion">
 
 
-					<?php for($count = 4 ; $count <12; $count++): ?>
+					<?php for($count = 4 ; $count <8; $count++): ?>
 						<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">
 							<div class="opinion__pic">
 								<img src="<?php echo str_replace('news', 'pictures', $lsidebar[$count]['url']); ?>/img_1_2.jpg"
@@ -87,6 +87,22 @@
 							</form>
 						</div>
 						</ul>
+				</div>
+				<div class="b opinion">
+
+
+					<?php for($count = 8 ; $count <12; $count++): ?>
+						<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">
+							<div class="opinion__pic">
+								<img src="<?php echo str_replace('news', 'pictures', $lsidebar[$count]['url']); ?>/img_1_2.jpg"
+									 alt="<?php echo $lsidebar[$count]['teme']; ?>" width="120" height="76">
+							</div>
+							<div class="opinion__content"><strong class="news__title"><?php echo $lsidebar[$count]['teme']; ?></strong>
+								<span class="opinion__author"><?php echo $lsidebar[$count]['description']; ?></span>
+							</div>
+						</a>
+					<?php   endfor ?>
+
 				</div>
 
 			</div>
