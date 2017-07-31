@@ -4,7 +4,7 @@
 				    <div ></div>
 				</div>
 				<div class="b opinion">
-				    <h3 class="title"><a href="<?php echo $main_name; ?>/topic/l-sidebar/10">Мысли вслух</a></h3>
+				    <h3 class="title"><a href="<?php echo $main_name; ?>/topic/l-sidebar/10">Это интересно</a></h3>
 					
 					<?php for($count = 0 ; $count <4; $count++): ?>
 					<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">

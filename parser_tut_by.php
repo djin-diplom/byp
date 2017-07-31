@@ -150,6 +150,7 @@ $contentTitle = str_replace('<link>','', $contentTitle);
                         $contentTitle = str_replace('&#x3C;','<',$contentTitle);
                         $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
                         $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
+                        $contentTitle = str_replace('FINANCE.', '',$contentTitle);
                         $url_mass_description[$k] = strip_tags($contentTitle, '<p>');
                     }
                     break;
