@@ -65,7 +65,7 @@
 					</ul>
 					<ul>
 						<link href="<?php echo $main_name; ?>/index_files/classic-081711.css" rel="stylesheet" type="text/css">
-						
+						<div id="mc_embed_signup">
 							<form action="<?php echo $main_name ?>"
 								  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
 								  class="validate" target="_blank" novalidate="novalidate">
@@ -85,7 +85,7 @@
 									</div>
 								</div>
 							</form>
-
+						</div>
 						</ul>
 				</div>
 				<div class="b opinion">

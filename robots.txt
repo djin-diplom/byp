@@ -1,17 +1,9 @@
 User-Agent: *
- 
 Disallow: /admin/
- 
 Disallow: /pastnews/
- 
 Disallow: /searchnews/
- 
 Disallow: /topic/
-
 Disallow: /delete/
-
-Disallow: /news/2017-2/
-  
+Disallow: /news/2017-2/ 
 Host: bypolit.org
- 
 Sitemap: https://bypolit.org/sitemap.xml
