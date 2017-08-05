@@ -64,7 +64,8 @@
 
 						<ul>
 							<li>
-								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org" data-layout="box_count" data-size="large" data-show-faces="true"></div>
+								
+								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org" data-layout="button_count" data-size="large" data-show-faces="true"></div>
 							</li>
 						</ul>
 
