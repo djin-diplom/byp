@@ -64,10 +64,10 @@
 
 						<ul>
 							<li>
-								<div class="fb-follow" data-href="https://www.facebook.com/groups/2379541508936868/" data-layout="standard" data-size="small" data-show-faces="true"></div>
+								<iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F2379541508936868%2F&width=0&height=80&layout=standard&size=small&show_faces=true&appId" width="0" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 							</li>
 						</ul>
-					
+
 
 					<ul>
 						<li><h1><a class="icon-rss" href="<?php echo $main_name; ?>/rss">RSS</a></h1></li>
@@ -95,7 +95,7 @@
 								</div>
 							</form>
 						</div>
-						</ul>
+					</ul>
 				</div>
 				<div class="b opinion">
 
