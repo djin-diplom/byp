@@ -5,7 +5,14 @@
 				</div>
 				<div class="b opinion">
 				    <h3 class="title"><a href="<?php echo $main_name; ?>/topic/l-sidebar/10">Рупор правды</a></h3>
-					
+					<div class="b subscription">
+					<ul>
+						<li>
+							<div class="fb-follow" data-href="https://www.facebook.com/groups/2379541508936868/" data-layout="standard" data-size="small" data-show-faces="true"></div>
+						</li>
+					</ul>
+					</div>
+
 					<?php for($count = 0 ; $count <4; $count++): ?>
 					<a href="<?php echo $main_name; ?><?php echo $lsidebar[$count]['url']; ?>" class="opinion__item">
 					    <div class="opinion__pic">
