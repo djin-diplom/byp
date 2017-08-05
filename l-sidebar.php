@@ -64,7 +64,8 @@
 
 						<ul>
 							<li>
-								<iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F2379541508936868%2F&width=0&height=80&layout=standard&size=small&show_faces=true&appId" width="0" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org"
+									 data-layout="standard" data-size="small" data-show-faces="true"></div>
 							</li>
 						</ul>
 
