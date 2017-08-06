@@ -13,13 +13,14 @@ $helper = $fb->getRedirectLoginHelper();
 try {
 
 	$accessToken = $helper->getAccessToken();
+	echo $accessToken;
 
 }
 
 catch(Facebook\Exceptions\FacebookResponseException $e) {
 
 	echo 'Graph вернул ошибку: ' . $e->getMessage();
-	exit;
+	//exit;
 
 }
 
