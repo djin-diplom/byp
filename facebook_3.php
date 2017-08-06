@@ -10,7 +10,7 @@ $fb = new Facebook\Facebook([
 
 $facebook_access_token = 'EAAYScg7qHv4BAFUjUwfNd5E1VZAkYU7Dn68AwDywSdR8uE83Whd2lJSZBZAcWdWrB2KxwngM5GkrMzCyqazeHwUWuBhBXWlUWI1s6RmYDINGla83od2Qm5ucGLZBZCr9jnIi6ZCLyx5TLrAA05EqrQQPsNt2Uglivr0JRlplZBNLAZDZD';
 
-$str_page = '/BYPolit.org/feed';
+$str_page = '/1202925035/feed';
 
 $feed = array('message' => 'тест');
 
