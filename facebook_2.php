@@ -10,10 +10,12 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 
+$accessToken = $helper->getAccessToken();
+echo $accessToken;
+
 try {
 
-	$accessToken = $helper->getAccessToken();
-	echo $accessToken;
+
 
 }
 
