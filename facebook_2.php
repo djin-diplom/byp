@@ -12,7 +12,7 @@ $helper = $fb->getRedirectLoginHelper();
 
 $accessToken = $helper->getAccessToken();
 echo $accessToken;
-
+/*
 try {
 
 
@@ -43,7 +43,7 @@ elseif ($helper->getError()){
 
 //echo $_SESSION['facebook_access_token'];
 
-/*
+
 try {
 
 	$response = $fb->get('/1202925035?fields=access_token', $_SESSION['facebook_access_token']);
