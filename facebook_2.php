@@ -31,14 +31,14 @@ catch(Facebook\Exceptions\FacebookSDKException $e) {
 }
 
 if (isset($accessToken))
-	$_SESSION['facebook_access_token'] = (string) $accessToken;
+	echo $accessToken;//$_SESSION['facebook_access_token'] = (string) $accessToken;
 
 elseif ($helper->getError()){
 	echo 'Ошибка';
 	exit;
 }
 
-echo $_SESSION['facebook_access_token'];
+//echo $_SESSION['facebook_access_token'];
 
 /*
 try {
