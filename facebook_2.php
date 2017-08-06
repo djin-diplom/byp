@@ -36,7 +36,7 @@ if (isset($accessToken))
 elseif ($helper->getError())
 	exit;
 
-
+/*
 try {
 
 	$response = $fb->get('/1202925035?fields=access_token', $_SESSION['facebook_access_token']);
@@ -59,7 +59,7 @@ catch (Facebook\Exceptions\FacebookSDKException $e) {
 
 //Токен страницы
 echo $response->getGraphNode()['access_token'];
-/*
+
 $facebook_access_token = 'AQBfy1WJuHjMZh_KKpEZT5jXb7Lh81-W9E6-lLnuMrOcZYExoqcCygM-fGvUZW7W0y--vlkKkorpL2Ebtd_ioAY3NVAjZu3N79buSPiNj_dH37r60mjxhfpx5eLdkQfo4HUsX4ALwmEzUBYZ_dkALEjRpyJWUgGYpRGulLUzk6a7qLDkOp5yIslEE_YUGgIdLB5rdCUhCpseq1xq3XodvgTBruginjhg0TcHcsKMPdHa_hPw3hb-ZNp8tSvf77PdJ0ehrKQ0aQ1S9U0YNa6USOZLcC0CDXiJOLwflozif0wjz2FgjpFf_LmEc5Z557eLGvA';
 
 $str_page = '/1202925035/feed';
