@@ -10,13 +10,13 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 
-$accessToken = $helper->getAccessToken();
-echo $accessToken;
-/*
+
+
+
 try {
 
-
-
+	$accessToken = $helper->getAccessToken();
+//echo $accessToken;
 }
 
 catch(Facebook\Exceptions\FacebookResponseException $e) {
@@ -33,20 +33,20 @@ catch(Facebook\Exceptions\FacebookSDKException $e) {
 
 }
 
-if (isset($accessToken))
-	echo $accessToken;//$_SESSION['facebook_access_token'] = (string) $accessToken;
+//if (isset($accessToken))
+	//echo $accessToken;//$_SESSION['facebook_access_token'] = (string) $accessToken;
 
-elseif ($helper->getError()){
-	echo 'Ошибка';
-	exit;
-}
+//elseif ($helper->getError()){
+	//echo 'Ошибка';
+//	exit;
+//}
 
 //echo $_SESSION['facebook_access_token'];
 
 
 try {
 
-	$response = $fb->get('/1202925035?fields=access_token', $_SESSION['facebook_access_token']);
+	$response = $fb->get('/1202925035?fields=access_token', $accessToken);
 
 }
 
@@ -66,7 +66,7 @@ catch (Facebook\Exceptions\FacebookSDKException $e) {
 
 //Токен страницы
 echo $response->getGraphNode()['access_token'];
-
+/*
 $facebook_access_token = 'AQBfy1WJuHjMZh_KKpEZT5jXb7Lh81-W9E6-lLnuMrOcZYExoqcCygM-fGvUZW7W0y--vlkKkorpL2Ebtd_ioAY3NVAjZu3N79buSPiNj_dH37r60mjxhfpx5eLdkQfo4HUsX4ALwmEzUBYZ_dkALEjRpyJWUgGYpRGulLUzk6a7qLDkOp5yIslEE_YUGgIdLB5rdCUhCpseq1xq3XodvgTBruginjhg0TcHcsKMPdHa_hPw3hb-ZNp8tSvf77PdJ0ehrKQ0aQ1S9U0YNa6USOZLcC0CDXiJOLwflozif0wjz2FgjpFf_LmEc5Z557eLGvA';
 
 $str_page = '/1202925035/feed';
