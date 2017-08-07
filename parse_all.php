@@ -68,6 +68,7 @@ function parser_page($url, $StartWord, $EndWord){
 //$contentTitle = str_replace('<','', $contentTitle);
 //$contentTitle = stripslashes($contentTitle);
 //$contentTitle = htmlspecialchars($contentTitle);
+    $contentTitle_feed = str_replace('©','', $contentTitle_feed);
 
 // выводим спарсенный текст.
     return $contentTitle_feed;
