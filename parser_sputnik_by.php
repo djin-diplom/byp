@@ -61,24 +61,13 @@ for($j = 0; $j < 4; $j++) {
         $contentTitle = substr($contentTitle, $LengthWord, $pos);
 
 //если в тексте встречается текст, который нам не нужен, вырезаем его
-        //$contentTitle = str_replace('entry-content clearfix">', '', $contentTitle);
+
         $contentTitle = str_replace('<link>','', $contentTitle);
         $contentTitle = str_replace('<title>','', $contentTitle);
         $contentTitle = str_replace('<description><![CDATA[','', $contentTitle);
-        //$contentTitle = str_replace('Информационный портал Русь молодая','', $contentTitle);
-        //$contentTitle = str_replace('впервые появилась','', $contentTitle);
-        //$contentTitle = str_replace('Запись ','', $contentTitle);
-        //$contentTitle = str_replace('  ','', $contentTitle);
+
         $contentTitle = str_replace('<enclosure url="','', $contentTitle);
 
-        //$contentTitle = str_replace('Информационный портал Русь молодая','', $contentTitle);
-        //$contentTitle = str_replace('впервые появилась','', $contentTitle);
-        //$contentTitle = str_replace('Запись ','', $contentTitle);
-        //$contentTitle = str_replace('  ','', $contentTitle);
-//$contentTitle = str_replace('<title','', $contentTitle);
-//$contentTitle = str_replace('<','', $contentTitle);
-//$contentTitle = stripslashes($contentTitle);
-//$contentTitle = htmlspecialchars($contentTitle);
 
 // выводим спарсенный текст.
         //echo $contentTitle;
