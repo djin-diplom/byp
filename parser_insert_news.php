@@ -39,7 +39,7 @@ $description = $url_mass_description[$k];
 
 $text = $url_mass_texts[$k];
 $text = transform_img($text, $url);
-    $text = 'fff';
+    //$text = 'fff';
 $keys = $keys_temp;
 
 $url_frame = '';
