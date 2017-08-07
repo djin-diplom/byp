@@ -16,25 +16,25 @@ print_r($url_mass_texts);
 for($k = 1; $k < $total_parse; $k++) {
 
 $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20+$hours*60)." minutes"));
-    echo $datetime;
+    echo $datetime.'<br>         ';
 $id = time()+($k);
-    echo $id;
+    echo $id.'<br>         ';
 $datetime_mass_1 = explode(' ', $datetime);
-    echo $datetime_mass_1;
+    //echo $datetime_mass_1.'<br>         ';
 $datetime_mass_2 = explode('-', $datetime_mass_1[0]);
-    echo $datetime_mass_2;
+    //echo $datetime_mass_2.'<br>         ';
 $year = $datetime_mass_2[0].'-2';
-    echo $year;
+    echo $year.'<br>         ';
 $month = $datetime_mass_2[1];
-    echo $month;
+    echo $month.'<br>         ';
 $day = $datetime_mass_2[2];
-    echo $day;
+    echo $day.'<br>         ';
 $comments = 0;
 $teme = $url_mass_titles[$k];
 
 $url = '/news/'.$year.'/'.$month.'/'.$day.'/'.$id.'/';
 $url = $url.translate_into_english($teme).'/';
-    echo $url;
+    echo $url.'<br>         ';
 $description = $url_mass_description[$k];
 
 $text = $url_mass_texts[$k];
@@ -50,7 +50,7 @@ $row_rand = mysqli_fetch_row($res_rand);
 $all_count_temp_1 = $row_rand[0] - 70; // всего записей по выборке
 
 $nomer_zap = rand(0,$all_count_temp_1);
-    echo $nomer_zap;
+    echo $nomer_zap.'<br>         ';
 
 $select_rand = "SELECT * FROM $Name_database.$table WHERE `datetime` > '$temp_time_ogr' LIMIT $nomer_zap, 1";
 
@@ -59,9 +59,9 @@ $res_rand = mysqli_query($link, $select_rand);
 $row_rand = mysqli_fetch_array($res_rand);
 
 $url_int = $row_rand['url'];
-    echo $url_int;
+    echo $url_int.'<br>         ';
 $teme_int = $row_rand['teme'];
-    echo $teme_int;
+    echo $teme_int.'<br>         ';
 
 
 
