@@ -4,11 +4,13 @@ $razdel = 'news_latest';
 $total_parse = $k + 1;
 //echo $total_parse;
 
+print_r($all_count);
+print_r($all_count_2);
 print_r($url_mass_url);
 print_r($url_mass_titles);
 print_r($url_mass_description);
 print_r($url_mass_img);
-print_r($url_mass_texts); 
+print_r($url_mass_texts);
 
 
 for($k = 1; $k < $total_parse; $k++) {
