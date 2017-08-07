@@ -96,7 +96,7 @@ for($j = 0; $j < 4; $j++) {
                         $url_mass_url[$k] = $url_temp_5;
                         $temp_url = $url_mass_url[$k];
                         // Определяем позицию строки <p>, до которой нужно все отрезать
-                        $text_temp_2 = strip_tags(parser_page($temp_url, "©", "social-likes-pane"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
+                        $text_temp_2 = strip_tags(parser_page($temp_url, "©", "b-banner"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
                         $pos_text = strpos($text_temp_2, '<p>');
                         $text_temp_2 = substr($text_temp_2, $pos_text);
                         $text_temp_2 = str_replace('px', '', $text_temp_2);
