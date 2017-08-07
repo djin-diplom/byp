@@ -151,6 +151,7 @@ for($j = 0; $j < 4; $j++) {
                         $contentTitle = str_replace('Sputnik','BYPolit.org',$contentTitle);
                         $contentTitle = str_replace('FINANCE.', '',$contentTitle);
                         $url_mass_description[$k] = strip_tags($contentTitle, '<p>');
+                        $url_mass_texts[$k] = str_replace('<p>'.$url_mass_description[$k].'</p>',$url_mass_texts[$k]);
                     }
                     break;
                 case 3:
