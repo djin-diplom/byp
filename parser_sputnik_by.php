@@ -99,9 +99,11 @@ for($j = 0; $j < 4; $j++) {
                         $text_temp_2 = parser_page($temp_url, "©", "b-banner");
                         $pos_feed_1 = strpos($text_temp_2, '<div class="b-inject');
                         $contentTitle_feed_1 = substr($text_temp_2, 0, $pos_feed_1);
-                        $pos_feed_2 = strpos($text_temp_2, '</a></div></div></p>');
+                        $pos_feed_2 = strpos($text_temp_2, '<div class="b-inject');
                         $contentTitle_feed_2 = substr($text_temp_2, $pos_feed_2);
-                        $text_temp_2 = $contentTitle_feed_1.'<br>'.$contentTitle_feed_2;
+                        $pos_feed_2 = strpos($contentTitle_feed_2, '</div></div></p>');
+                        $contentTitle_feed_2 = substr($contentTitle_feed_2, $pos_feed_2);
+                        $text_temp_2 = $contentTitle_feed_1.'</p><br>'.$contentTitle_feed_2;
 
 
                         $text_temp_2 = strip_tags($text_temp_2, '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
