@@ -58,6 +58,9 @@ switch($rubrika){
 	//case 'save': require("save_picture.php");
 	//	exit;
 	//	break;
+	case 'parse_3': require("parser_3.php");
+		exit;
+		break;
 	case 'parse_2': require("parser_2.php");
 		exit;
 		break;
