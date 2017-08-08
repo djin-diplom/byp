@@ -9,7 +9,7 @@ $url_mass_texts = array();
 $all_count = array();
 $all_count_2 = array();
 
-for($j = 0; $j < 4; $j++) {
+for($j = 0; $j < 5; $j++) {
     $mainContent = file_get_contents($ParserPage);
     $contentTitle = $mainContent;
 
@@ -37,6 +37,15 @@ for($j = 0; $j < 4; $j++) {
                 } else {
                     $StartWord = '<enclosure url="';
                     $EndWord = '" ';
+                }
+                break;
+            case 4:
+                if ($i == 0){
+                    $StartWord = '<copyright>';
+                    $EndWord = '</copyright>';
+                } else {
+                    $StartWord = '<item>';
+                    $EndWord = '</item>';
                 }
                 break;
         }
@@ -146,10 +155,10 @@ for($j = 0; $j < 4; $j++) {
                 case 2:
                     if ($all_count[$i] == 0) {
                         $k++;
-                        $contentTitle = str_replace('&#x3C;','<',$contentTitle);
-                        $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
+                        //$contentTitle = str_replace('&#x3C;','<',$contentTitle);
+                        //$contentTitle = str_replace('/&#x3E;','>',$contentTitle);
                         $contentTitle = str_replace('Sputnik','BYPolit.org',$contentTitle);
-                        $contentTitle = str_replace('FINANCE.', '',$contentTitle);
+                        //$contentTitle = str_replace('FINANCE.', '',$contentTitle);
                         $url_mass_description[$k] = strip_tags($contentTitle, '<p>');
                         $url_mass_texts[$k] = str_replace('<p>'.$url_mass_description[$k].'</p>','',$url_mass_texts[$k]);
                     }
@@ -158,6 +167,12 @@ for($j = 0; $j < 4; $j++) {
                     if ($all_count[$i] == 0) {
                         $k++;
                         $url_mass_img[$k] = $contentTitle;
+                    }
+                    break;
+                case 4:
+                    if ($all_count[$i] == 0) {
+                        $k++;
+
                     }
                     break;
             }
