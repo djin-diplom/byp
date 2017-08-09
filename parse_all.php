@@ -92,7 +92,7 @@ if (empty($_POST['hours'])) {
     $hours++;
     ?>
     <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
-        <input type="text" name="hours" value="<?php echo $hours; ?>"><br>
+        <input type="text" name="hours" value="<?php echo $hours*2; ?>"><br>
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг c задержкой (ввести интервал задержки в часах)"/>
     </form>
     <?php
