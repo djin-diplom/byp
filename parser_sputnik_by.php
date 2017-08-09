@@ -9,7 +9,7 @@ $url_mass_texts = array();
 $all_count = array();
 $all_count_2 = array();
 
-for($j = 0; $j < 5; $j++) {
+for($j = 0; $j < 4; $j++) {
     $mainContent = file_get_contents($ParserPage);
     $contentTitle = $mainContent;
 
@@ -38,28 +38,32 @@ for($j = 0; $j < 5; $j++) {
                     $StartWord = '<enclosure url="';
                     $EndWord = '" ';
                 }
+
                 break;
-            case 4:
-                if ($i == 0){
-                    $StartWord = '<copyright>';
-                    $EndWord = '</copyright>';
-                } else {
-                    $StartWord = '<item>';
-                    $EndWord = '</item>';
-                }
-                break;
+
         }
         $LengthWord = 0;
 // Определяем позицию строки, до которой нужно все отрезать
+        $contentTitle_2 = $contentTitle;
         $pos = strpos($contentTitle, $StartWord);
         if ($pos === false) break;
-
-
 //Отрезаем все, что идет до нужной нам позиции
         $contentTitle = substr($contentTitle, $pos);
 
-        $pos_2 = strpos($contentTitle, $EndWord);
-        $mainContent = substr($contentTitle, $pos_2);
+        if ($j == 3) {
+            //$StartWord_2 = '<item>';
+            $EndWord_2 = '</item>';
+            //$pos_t = strpos($contentTitle_2, $StartWord_2);
+            //if ($pos_t === false) break;
+
+//Отрезаем все, что идет до нужной нам позиции
+            $contentTitle_2 = substr($contentTitle_2, $contentTitle_2);
+            $pos_2_t = strpos($contentTitle_2, $EndWord_2);
+            $mainContent = substr($contentTitle_2, $pos_2_t);
+        } else {
+            $pos_2 = strpos($contentTitle, $EndWord);
+            $mainContent = substr($contentTitle, $pos_2);
+        }
 
         //echo '<br>'.$ParserPage.'<br>';
 
@@ -169,12 +173,7 @@ for($j = 0; $j < 5; $j++) {
                         $url_mass_img[$k] = $contentTitle;
                     }
                     break;
-                case 4:
-                    if ($all_count[$i] == 0) {
-                        $k++;
 
-                    }
-                    break;
             }
         } else {
             $url_mass_url[0] = '';
