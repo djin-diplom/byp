@@ -50,7 +50,7 @@ for($j = 0; $j < 4; $j++) {
 //Отрезаем все, что идет до нужной нам позиции
         $contentTitle = substr($contentTitle, $pos);
 
-        if ($j == 3) {
+        if ($j == 3 and $i == 0) {
             //$StartWord_2 = '<item>';
             $EndWord_2 = '</item>';
             //$pos_t = strpos($contentTitle_2, $StartWord_2);
