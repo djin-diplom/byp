@@ -86,6 +86,7 @@ for($j = 0; $j < 4; $j++) {
         $contentTitle = str_replace('<description><![CDATA[','', $contentTitle);
 
         $contentTitle = str_replace('<enclosure url="','', $contentTitle);
+        $contentTitle = str_replace('<item>','', $contentTitle);
 
 
 // выводим спарсенный текст.
