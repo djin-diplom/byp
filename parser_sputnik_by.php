@@ -52,11 +52,11 @@ for($j = 0; $j < 4; $j++) {
 
         if ($j == 3) {
             if ($i ==0 ) {
-                $StartWord = '<copyright>';
+                $StartWord_2 = '<copyright>';
                 $EndWord_2 = '</copyright>';
             }
             else {
-                $StartWord = '<item>';
+                $StartWord_2 = '<item>';
                 $EndWord_2 = '</item>';
             }
             $pos_t = strpos($contentTitle_2, $StartWord_2);
