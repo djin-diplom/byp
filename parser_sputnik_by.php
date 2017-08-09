@@ -190,7 +190,7 @@ for($j = 0; $j < 4; $j++) {
             $url_mass_description[0] = '';
         }
         $i++;
-        if ($k == 3 ) break;
+        if ($k == 6 ) break;
 
     }
 }
