@@ -57,7 +57,7 @@ for($j = 0; $j < 4; $j++) {
             //if ($pos_t === false) break;
 
 //Отрезаем все, что идет до нужной нам позиции
-            $contentTitle_2 = substr($contentTitle_2, $contentTitle_2);
+            //$contentTitle_2 = substr($contentTitle_2, $pos_t);
             $pos_2_t = strpos($contentTitle_2, $EndWord_2);
             $mainContent = substr($contentTitle_2, $pos_2_t);
         } else {
