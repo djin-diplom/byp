@@ -39,7 +39,12 @@ $description = $url_mass_description[$k];
 
 $text = $url_mass_texts[$k];
 $text = transform_img($text, $url);
-    //$text = 'fff';
+    $text = str_replace('Беларусью','Белоруссией',$text);
+    $text = str_replace('Беларусь','Белоруссия',$text);
+    $text = str_replace('Беларуси','Белоруссии',$text);
+    $text = str_replace('в Украине','на Украине',$text);
+    $text = str_replace('В Украине','На Украине',$text);
+
 $keys = $keys_temp;
 
 $url_frame = '';
