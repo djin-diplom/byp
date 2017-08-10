@@ -31,19 +31,18 @@ $day = $datetime_mass_2[2];
    // echo $day.'<br>         ';
 $comments = 0;
 $teme = $url_mass_titles[$k];
+    $teme = transform_words($teme);
+
 
 $url = '/news/'.$year.'/'.$month.'/'.$day.'/'.$id.'/';
 $url = $url.translate_into_english($teme).'/';
   //  echo $url.'<br>         ';
 $description = $url_mass_description[$k];
+    $description = transform_words($description);
 
 $text = $url_mass_texts[$k];
 $text = transform_img($text, $url);
-    $text = str_replace('Беларусью','Белоруссией',$text);
-    $text = str_replace('Беларусь','Белоруссия',$text);
-    $text = str_replace('Беларуси','Белоруссии',$text);
-    $text = str_replace('в Украине','на Украине',$text);
-    $text = str_replace('В Украине','На Украине',$text);
+    $text = transform_words($text);
 
 $keys = $keys_temp;
 
