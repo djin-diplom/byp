@@ -55,6 +55,8 @@ function transform_img($string,$url) {
 
 function transform_words($string) {
 	$string = str_replace('Беларусью','Белоруссией',$string);
+	$string = str_replace('в Беларусь','в Белоруссию',$string);
+	$string = str_replace('В Беларусь','В Белоруссию',$string);
 	$string = str_replace('Беларусь','Белоруссия',$string);
 	$string = str_replace('Беларуси','Белоруссии',$string);
 	$string = str_replace('в Украине','на Украине',$string);
