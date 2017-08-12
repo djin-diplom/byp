@@ -86,7 +86,7 @@ if(empty($_POST['post_1'])) {
     }
 
     ?>
-    <form method="POST" action="<?php echo $main_name; ?>/parser.php">
+    <form method="POST" action="<?php echo $main_name; ?>/parse">
         <?php for ($i = 0; $i < $k; $i++): ?>
             <input type="checkbox" name="checkbox_<?php echo $i; ?>"><?php echo $content_title[$i]; ?><br>
             <input type="hidden" name="title_<?php echo $i; ?>" value="<?php echo $content_title[$i]; ?>">
