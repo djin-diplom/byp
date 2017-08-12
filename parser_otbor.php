@@ -6,12 +6,12 @@ if(empty($_POST['post_1'])) {
         $LengthWord = 0;
 // Определяем позицию строки, до которой нужно все отрезать
         $pos = strpos($string, $StartWord);
-        if ($pos === false) return '';
+        if ($pos === false) return $string;
 //Отрезаем все, что идет до нужной нам позиции <item>
         $string = substr($string, $pos);
 // Точно таким же образом находим позицию конечной строки
         $pos = strpos($string, $EndWord);
-        if ($pos === false) return '';
+        if ($pos === false) return $string;
 // Отрезаем нужное количество символов от нулевого
         $string = substr($string, $LengthWord, $pos);
         $string = str_replace($StartWord, '', $string);//получили
