@@ -71,7 +71,7 @@ if(empty($_POST['post_1'])) {
     }
 
     ?>
-    <form method="POST" action="<?php echo $main_name; ?>/parse">
+    <form method="POST" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
         <?php for ($i = 0; $i < $k; $i++): ?>
             <input type="checkbox" name="checkbox_<?php echo $i; ?>"><?php echo $content_title[$i]; ?><br>
 
@@ -86,22 +86,6 @@ if(empty($_POST['post_1'])) {
         endfor;
         ?>
         <input type="hidden" name="post_1" value="<?php echo $k;?>">
-        <?php
-        if (empty($_POST['hours'])) {
-            ?>
-                <input type="text" name="hours" value="1"><br>
-            <?php
-
-        } else {
-            $hours = $_POST['hours'];
-            $hours = $hours + 2;
-            ?>
-                <input type="text" name="hours" value="<?php echo $hours; ?>"><br>
-            <?php
-        }
-        ?>
-
-
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить данные"/>
     </form>
 
