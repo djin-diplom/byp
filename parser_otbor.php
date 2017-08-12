@@ -6,12 +6,12 @@ if(empty($_POST['post_1'])) {
         $LengthWord = 0;
 // Определяем позицию строки, до которой нужно все отрезать
         $pos = strpos($string, $StartWord);
-        if ($pos === false) return $string;
+        if ($pos === false) return '';
 //Отрезаем все, что идет до нужной нам позиции <item>
         $string = substr($string, $pos);
 // Точно таким же образом находим позицию конечной строки
         $pos = strpos($string, $EndWord);
-        if ($pos === false) return $string;
+        if ($pos === false) return '';
 // Отрезаем нужное количество символов от нулевого
         $string = substr($string, $LengthWord, $pos);
         $string = str_replace($StartWord, '', $string);//получили
@@ -104,20 +104,58 @@ if(empty($_POST['post_1'])) {
 
 } else {
 
-    for($i = 0; $i < $_POST['post_1']; $i++){
-        if(!empty($_POST['checkbox_'.$i])){
-            echo $_POST['title_'.$i].'<br>';
-            echo $_POST['link_'.$i].'<br>';
 
-            $contentTitle = str_replace('&#x3C;','<',$_POST['description_'.$i]);
-            $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
-            $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
-            $contentTitle = str_replace('FINANCE.', '',$contentTitle);
-            $contentTitle = strip_tags($contentTitle, '<p>');
+    function parser_page($url, $StartWord, $EndWord){
 
+//откуда будем парсить информацию
+//$ParserPage = 'http://rumol.org/blizkie-dali-neladno-v-dome-porugaj-soseda/';
+        $ParserPage_feed = $url;
 
-            echo $contentTitle.'<br>';
-            echo $_POST['img_'.$i].'<br><br><br>';
-        }
+        $mainContent_feed = file_get_contents($ParserPage_feed);
+        $contentTitle_feed = $mainContent_feed;
+        $StartWord_feed = $StartWord;//"entry-content clearfix";
+        $EndWord_feed = $EndWord;//"crp_related";
+        $LengthWord_feed = 0;
+// Определяем позицию строки, до которой нужно все отрезать
+        $pos_feed = strpos($contentTitle_feed, $StartWord_feed);
+
+//Отрезаем все, что идет до нужной нам позиции
+        $contentTitle_feed = substr($contentTitle_feed, $pos_feed);
+
+// Точно таким же образом находим позицию конечной строки
+        $pos_feed = strpos($contentTitle_feed, $EndWord_feed);
+
+// Отрезаем нужное количество символов от нулевого
+        $contentTitle_feed = substr($contentTitle_feed, $LengthWord_feed, $pos_feed);
+        $contentTitle_feed = str_replace('©','', $contentTitle_feed);
+
+// выводим спарсенный текст.
+        return $contentTitle_feed;
+
     }
+
+    $url_mass_url = array();
+    $url_mass_titles = array();
+    $url_mass_description = array();
+    $url_mass_img = array();
+    $url_mass_texts = array();
+    //$all_count = array();
+    //$all_count_2 = array();
+
+    $total_parse = $_POST['post_1'];
+
+    for($k = 0; $k < $total_parse; $k++){
+        //if(!empty($_POST['checkbox_'.$i])){
+        //    echo $_POST['title_'.$i].'<br>';
+        //    echo $_POST['link_'.$i].'<br>';
+        //    echo $_POST['description_'.$i].'<br>';
+        //    echo $_POST['img_'.$i].'<br><br><br>';
+        //}
+        require_once ('parser_tut_by_2.php');
+    }
+
+    $url_ext = 'https://www.tut.by';
+
+
+    require_once("parser_insert_news.php");
 }

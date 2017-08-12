@@ -1,13 +1,14 @@
 <?php
+set_time_limit(0);
 
 $ParserPage = 'https://news.tut.by/rss/all.rss'; //мир, Белоруссия, Россия
 
 $parse_file = "parser_tut_by.php";
 
 $name_parse = "parse";
-set_time_limit(0);
 
 
+$hours = 1;
 $table ='news';
 $table_link ='link';
 
