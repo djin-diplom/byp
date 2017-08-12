@@ -75,11 +75,12 @@ if(empty($_POST['post_1'])) {
         <?php for ($i = 0; $i < $k; $i++): ?>
             <input type="checkbox" name="checkbox_<?php echo $i; ?>"><?php echo $content_title[$i]; ?><br>
 
-            <input type="text" name="title_<?php echo $i; ?>" value="<?php echo $content_title[$i]; ?>">
-            <input type="text" name="link_<?php echo $i; ?>" value="<?php echo $content_link[$i] ?>">
-            
+
+            <textarea type="text" name="title_<?php echo $i; ?>"  ><?php echo $content_title[$i]; ?></textarea><br>
+            <textarea type="text" name="link_<?php echo $i; ?>"  ><?php echo $content_link[$i] ?></textarea><br>
             <textarea type="text" name="description_<?php echo $i; ?>"  ><?php echo $content_description[$i]; ?></textarea><br>
-            <input type="text" name="img_<?php echo $i; ?>" value="<?php echo $content_img[$i]; ?>">
+            
+            <textarea type="text" name="img_<?php echo $i; ?>"  ><?php echo $content_img[$i]; ?></textarea><br>
 
             <?php
         endfor;
