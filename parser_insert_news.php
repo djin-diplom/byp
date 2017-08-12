@@ -1,7 +1,7 @@
 <?php
 
 $razdel = 'news_latest';
-//$total_parse = $k + 1;
+
 //echo $total_parse;
 
 //print_r($all_count);

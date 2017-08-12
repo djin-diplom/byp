@@ -118,7 +118,8 @@ for($j = 0; $j < 4; $j++) {
                         $url_mass_url[$k] = $url_temp_5;
                         $temp_url = $url_mass_url[$k];
                         // Определяем позицию строки <p>, до которой нужно все отрезать
-                        $text_temp_2 = parser_page($temp_url, "©", "b-banner");
+                        $text_temp_2 = otbor_parse($temp_url, "©", "b-banner");
+                        $text_temp_2 = str_replace('©','', $text_temp_2);
                         $pos_feed_1 = strpos($text_temp_2, '<div class="b-inject');
                         $contentTitle_feed_1 = substr($text_temp_2, 0, $pos_feed_1);
                         $pos_feed_2 = strpos($text_temp_2, '<div class="b-inject');

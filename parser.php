@@ -1,6 +1,5 @@
 <?php
 set_time_limit(0);
-//require_once ('functions.php');
 
 $ParserPage = 'https://news.tut.by/rss/all.rss'; //мир, Белоруссия, Россия
 

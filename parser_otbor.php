@@ -105,35 +105,6 @@ if(empty($_POST['post_1'])) {
 } else {
 
 
-    function parser_page($url, $StartWord, $EndWord){
-
-//откуда будем парсить информацию
-//$ParserPage = 'http://rumol.org/blizkie-dali-neladno-v-dome-porugaj-soseda/';
-        $ParserPage_feed = $url;
-
-        $mainContent_feed = file_get_contents($ParserPage_feed);
-        $contentTitle_feed = $mainContent_feed;
-        $StartWord_feed = $StartWord;//"entry-content clearfix";
-        $EndWord_feed = $EndWord;//"crp_related";
-        $LengthWord_feed = 0;
-// Определяем позицию строки, до которой нужно все отрезать
-        $pos_feed = strpos($contentTitle_feed, $StartWord_feed);
-
-//Отрезаем все, что идет до нужной нам позиции
-        $contentTitle_feed = substr($contentTitle_feed, $pos_feed);
-
-// Точно таким же образом находим позицию конечной строки
-        $pos_feed = strpos($contentTitle_feed, $EndWord_feed);
-
-// Отрезаем нужное количество символов от нулевого
-        $contentTitle_feed = substr($contentTitle_feed, $LengthWord_feed, $pos_feed);
-        $contentTitle_feed = str_replace('©','', $contentTitle_feed);
-
-// выводим спарсенный текст.
-        return $contentTitle_feed;
-
-    }
-
     $url_mass_url = array();
     $url_mass_titles = array();
     $url_mass_description = array();
@@ -142,20 +113,25 @@ if(empty($_POST['post_1'])) {
     //$all_count = array();
     //$all_count_2 = array();
 
-    $total_parse = $_POST['post_1'];
+    $total_parse_all = $_POST['post_1'];
 
-    for($k = 0; $k < $total_parse; $k++){
+    $i = 0;
+    for($k = 0; $k < $total_parse_all; $k++){
         //if(!empty($_POST['checkbox_'.$i])){
         //    echo $_POST['title_'.$i].'<br>';
         //    echo $_POST['link_'.$i].'<br>';
         //    echo $_POST['description_'.$i].'<br>';
         //    echo $_POST['img_'.$i].'<br><br><br>';
         //}
-        require_once ('parser_tut_by_2.php');
+        if(!empty($_POST['checkbox_'.$k])) {
+            require_once('parser_tut_by_2.php');
+            $i++;
+
+        }
     }
+    $total_parse = $i;
 
     $url_ext = 'https://www.tut.by';
-
-
+    
     require_once("parser_insert_news.php");
 }
