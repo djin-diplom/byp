@@ -9,8 +9,10 @@ $url_mass_texts = array();
 $all_count = array();
 $all_count_2 = array();
 
+$mainContent_2 = file_get_contents($ParserPage);
+
 for($j = 0; $j < 4; $j++) {
-    $mainContent = file_get_contents($ParserPage);
+    $mainContent = $mainContent_2;
     $contentTitle = $mainContent;
 
     $i = 0;
