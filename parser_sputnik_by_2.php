@@ -36,4 +36,4 @@ $text_temp_2 = file_get_contents($url_mass_url[$i]);
 
                         $url_mass_texts[$i] = str_replace('<p>'.$url_mass_description[$i].'</p>','',$url_mass_texts[$i]);
    
-                        $url_mass_img[$k] = $_POST['img_'.$k];
+                        $url_mass_img[$i] = $_POST['img_'.$k];
