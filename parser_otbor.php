@@ -74,10 +74,11 @@ if(empty($_POST['post_1'])) {
     <form method="POST" action="<?php echo $main_name; ?>/parse">
         <?php for ($i = 0; $i < $k; $i++): ?>
             <input type="checkbox" name="checkbox_<?php echo $i; ?>"><?php echo $content_title[$i]; ?><br>
-            <input type="hidden" name="title_<?php echo $i; ?>" value="<?php echo $content_title[$i]; ?>">
-            <input type="hidden" name="link_<?php echo $i; ?>" value="<?php echo $content_link[$i] ?>">
-            <input type="hidden" name="description_<?php echo $i; ?>" value="<?php echo $content_description[$i]; ?>">
-            <input type="hidden" name="img_<?php echo $i; ?>" value="<?php echo $content_img[$i]; ?>">
+            <input type="text" name="title_<?php echo $i; ?>" value="<?php echo $content_title[$i]; ?>">
+            <input type="text" name="link_<?php echo $i; ?>" value="<?php echo $content_link[$i] ?>">
+            <input type="text" name="description_<?php echo $i; ?>" value="<?php echo $content_description[$i]; ?>">
+            <input type="text" name="img_<?php echo $i; ?>" value="<?php echo $content_img[$i]; ?>">
+
             <?php
         endfor;
         ?>
