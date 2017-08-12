@@ -76,11 +76,11 @@ if(empty($_POST['post_1'])) {
             <input type="checkbox" name="checkbox_<?php echo $i; ?>"><?php echo $content_title[$i]; ?><br>
 
 
-            <textarea type="hidden" name="title_<?php echo $i; ?>"  ><?php echo $content_title[$i]; ?></textarea><br>
-            <textarea type="hidden" name="link_<?php echo $i; ?>"  ><?php echo $content_link[$i] ?></textarea><br>
-            <textarea type="hidden" name="description_<?php echo $i; ?>"  ><?php echo $content_description[$i]; ?></textarea><br>
+            <textarea hidden name="title_<?php echo $i; ?>"  ><?php echo $content_title[$i]; ?></textarea><br>
+            <textarea hidden name="link_<?php echo $i; ?>"  ><?php echo $content_link[$i] ?></textarea><br>
+            <textarea hidden name="description_<?php echo $i; ?>"  ><?php echo $content_description[$i]; ?></textarea><br>
 
-            <textarea type="hidden" name="img_<?php echo $i; ?>"  ><?php echo $content_img[$i]; ?></textarea><br>
+            <textarea hidden name="img_<?php echo $i; ?>"  ><?php echo $content_img[$i]; ?></textarea><br>
 
             <?php
         endfor;
