@@ -54,14 +54,14 @@ if(empty($_POST['post_1'])) {
         if ($all_count == 0) {
             $content_link[$k] = $content_link_temp;
 
-            $id = time() + ($i);
-            $insert = "INSERT INTO $Name_database.$table_link (`id`, `url`) VALUES ($id,'$content_link_temp')";
-            $result = mysqli_query($link, $insert);
-            if ($result = 'true') {
-                //echo "Информация занесена в базу данных";
-            } else {
-                echo "Информация не занесена в базу данных";
-            }
+            //$id = time() + ($i);
+           // $insert = "INSERT INTO $Name_database.$table_link (`id`, `url`) VALUES ($id,'$content_link_temp')";
+           // $result = mysqli_query($link, $insert);
+          //  if ($result = 'true') {
+          //      //echo "Информация занесена в базу данных";
+          //  } else {
+           //     echo "Информация не занесена в базу данных";
+          //  }
 
             //Получаем title
             $StartWord = "<title>";
