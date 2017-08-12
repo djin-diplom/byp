@@ -96,7 +96,7 @@ if(empty($_POST['post_1'])) {
             <?php
         endfor;
         ?>
-        <input type="hidden" name="post_1" value="1">
+        <input type="hidden" name="post_1" value="<?php echo $k;?>">
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить данные"/>
     </form>
 
@@ -104,8 +104,12 @@ if(empty($_POST['post_1'])) {
 
 } else {
 
-    echo $_POST['checkbox_0'];
-    echo $_POST['checkbox_1'];
-
-
+    for($i = 0; $i < $_POST['post_1']; $i++){
+        if(!empty($_POST['checkbox_0'])){
+            echo $_POST['title_'.$i].'<br>';
+            echo $_POST['link_'.$i].'<br>';
+            echo $_POST['description_'.$i].'<br>';
+            echo $_POST['img_'.$i].'<br>';
+        }
+    }
 }
