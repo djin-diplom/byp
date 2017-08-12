@@ -5,7 +5,6 @@
 //$mainContent = file_get_contents($ParserPage);
 
 //echo $mainContent;
-set_time_limit(0);
 
 
 //require_once("functions.php");
@@ -28,8 +27,6 @@ set_time_limit(0);
 //    exit;
 //}
 
-$table ='news';
-$table_link ='link';
 
 
 function parser_page($url, $StartWord, $EndWord){
