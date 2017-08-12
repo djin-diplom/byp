@@ -67,7 +67,7 @@ if(empty($_POST['post_1'])) {
             $k++;
 
         }
-        if ($k == 10 ) break;
+        if ($k == 15 ) break;
     }
 
     ?>

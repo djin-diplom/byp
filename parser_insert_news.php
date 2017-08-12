@@ -15,7 +15,7 @@ print_r($url_mass_titles);
 
 for($k = 0; $k < $total_parse; $k++) {
 
-$datetime = date("Y-m-d H:i:s",strtotime("+".($k*15+$hours*60)." minutes"));
+$datetime = date("Y-m-d H:i:s",strtotime("+".(($k+1+$hours)*15)." minutes"));
    // echo $datetime.'<br>         ';
 $id = time()+($k);
    // echo $id.'<br>         ';
@@ -112,7 +112,7 @@ imagejpeg($image_smoll_sq, $filename2_sq, 10);
 
 
 }
-    $hours = $hours + 2;
+    $hours = $hours + $total_parse;
     ?>
     <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
         <input type="text" name="hours" value="<?php echo $hours; ?>"><br>
