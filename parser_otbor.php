@@ -1,4 +1,18 @@
 <?php
+
+if (empty($_POST['hours'])) {
+    ?>
+    <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
+        <input type="text" name="hours" value="0"><br>
+        <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг c задержкой (ввести интервал задержки в часах)"/>
+    </form>
+    <?php
+} else $hours = $_POST['hours'];
+
+$table ='news';
+$table_link ='link';
+
+
 if(empty($_POST['post_1'])) {
 
    
@@ -121,13 +135,13 @@ if(empty($_POST['post_1'])) {
              // echo $_POST['link_'.$i].'<br>';
                //echo $_POST['description_'.$i].'<br>';
               // echo $_POST['img_'.$i].'<br><br><br>';
-            require('parser_tut_by_2.php');
+            require($parse_file);
             $i++;
         }
     }
     $total_parse = $i;
 
-    $url_ext = 'https://www.tut.by';
+    
     
     require_once("parser_insert_news.php");
 }
