@@ -1,22 +1,7 @@
 <?php
 if(empty($_POST['post_1'])) {
 
-    function otbor_parse($string, $StartWord, $EndWord)
-    {
-        $LengthWord = 0;
-// Определяем позицию строки, до которой нужно все отрезать
-        $pos = strpos($string, $StartWord);
-        if ($pos === false) return '';
-//Отрезаем все, что идет до нужной нам позиции <item>
-        $string = substr($string, $pos);
-// Точно таким же образом находим позицию конечной строки
-        $pos = strpos($string, $EndWord);
-        if ($pos === false) return '';
-// Отрезаем нужное количество символов от нулевого
-        $string = substr($string, $LengthWord, $pos);
-        $string = str_replace($StartWord, '', $string);//получили
-        return $string;
-    }
+   
 
 
     $mainContent = file_get_contents($ParserPage);
