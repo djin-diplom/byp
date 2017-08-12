@@ -82,7 +82,7 @@ if (empty($_POST['hours'])) {
 
 } else {
     $hours = $_POST['hours'];
-    $keys_temp = 'мир, Белоруссия, Россия, политика, экономика';
+    
     echo $keys_temp;
     
     require ($parse_file);

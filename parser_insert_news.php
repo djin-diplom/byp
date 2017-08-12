@@ -13,7 +13,7 @@ print_r($url_mass_description);
 //print_r($url_mass_texts);
 
 
-for($k = 1; $k < $total_parse; $k++) {
+for($k = 0; $k < $total_parse; $k++) {
 
 $datetime = date("Y-m-d H:i:s",strtotime("+".($k*20+$hours*60)." minutes"));
    // echo $datetime.'<br>         ';
