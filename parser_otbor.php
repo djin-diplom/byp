@@ -99,7 +99,11 @@ if(empty($_POST['post_1'])) {
     //$all_count_2 = array();
 
     $total_parse_all = $_POST['post_1'];
-echo $total_parse_all;
+//echo $total_parse_all;
+    echo $_POST['checkbox_'.0];
+    echo $_POST['checkbox_'.1];
+    echo $_POST['checkbox_'.2];
+    echo $_POST['checkbox_'.3];
 
     $i = 0;
     for($k = 0; $k < $total_parse_all; $k++){
