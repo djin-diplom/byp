@@ -99,6 +99,7 @@ if(empty($_POST['post_1'])) {
     //$all_count_2 = array();
 
     $total_parse_all = $_POST['post_1'];
+echo $total_parse_all;
 
     $i = 0;
     for($k = 0; $k < $total_parse_all; $k++){
@@ -111,7 +112,6 @@ if(empty($_POST['post_1'])) {
         if(!empty($_POST['checkbox_'.$k])) {
             require_once('parser_tut_by_2.php');
             $i++;
-
         }
     }
     $total_parse = $i;
