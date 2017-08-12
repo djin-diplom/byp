@@ -100,10 +100,7 @@ if(empty($_POST['post_1'])) {
 
     $total_parse_all = $_POST['post_1'];
 //echo $total_parse_all;
-    echo $_POST['checkbox_'.'0'];
-    echo $_POST['checkbox_'.'1'];
-    echo $_POST['checkbox_'.'2'];
-    echo $_POST['checkbox_'.'3'];
+ 
 
     $i = 0;
     for($k = 0; $k < $total_parse_all; $k++){
@@ -114,6 +111,7 @@ if(empty($_POST['post_1'])) {
         //    echo $_POST['img_'.$i].'<br><br><br>';
         //}
         if(!empty($_POST['checkbox_'.$k])) {
+            echo $_POST['checkbox_'.$k];
             require_once('parser_tut_by_2.php');
             $i++;
         }
