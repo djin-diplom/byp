@@ -108,7 +108,16 @@ if(empty($_POST['post_1'])) {
         if(!empty($_POST['checkbox_'.$i])){
             echo $_POST['title_'.$i].'<br>';
             echo $_POST['link_'.$i].'<br>';
-            echo $_POST['description_'.$i].'<br>';
+
+            $contentTitle = str_replace('&#x3C;','<',$_POST['description_'.$i]);
+            $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
+            $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
+            $contentTitle = str_replace('FINANCE.', '',$contentTitle);
+            $contentTitle = str_replace('<![CDATA[', '',$contentTitle);
+            $contentTitle = strip_tags($contentTitle, '<p>');
+
+
+            echo $contentTitle.'<br>';
             echo $_POST['img_'.$i].'<br>';
         }
     }
