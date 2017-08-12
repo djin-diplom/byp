@@ -27,7 +27,7 @@ if(empty($_POST['post_1'])) {
 
 
     $k = 0;
-    for ($i == 0; ; $i++) {
+    for ($i = 0; ; $i++) {
         $content = $mainContent;
         $StartWord = "<item>";
         $EndWord = "</item>";
