@@ -105,7 +105,7 @@ if(empty($_POST['post_1'])) {
 } else {
 
     for($i = 0; $i < $_POST['post_1']; $i++){
-        if(!empty($_POST['checkbox_0'])){
+        if(!empty($_POST['checkbox_'.$i])){
             echo $_POST['title_'.$i].'<br>';
             echo $_POST['link_'.$i].'<br>';
             echo $_POST['description_'.$i].'<br>';
