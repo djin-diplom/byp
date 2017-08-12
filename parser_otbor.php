@@ -86,6 +86,7 @@ if(empty($_POST['post_1'])) {
         endfor;
         ?>
         <input type="hidden" name="post_1" value="<?php echo $k;?>">
+        <input type="hidden" name="hours" value="<?php echo $hours; ?>">
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить данные"/>
     </form>
 

@@ -112,25 +112,10 @@ imagejpeg($image_smoll_sq, $filename2_sq, 10);
 
 
 }
-if (empty($_POST['hours'])) {
-    ?>
-    <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
-        <input type="text" name="hours" value="1"><br>
-        <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг"/>
-    </form>
-    <?php
-
-} else {
     $hours = $_POST['hours'];
-
-    echo $keys_temp;
-
-    require ($parse_file);
     $hours = $hours + 6;
     ?>
     <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
         <input type="text" name="hours" value="<?php echo $hours; ?>"><br>
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг"/>
     </form>
-    <?php
-}

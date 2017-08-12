@@ -25,7 +25,8 @@ $parse_file = "parser_tut_by.php";
 $name_parse = "parse";
 $keys_temp = 'мир, Белоруссия, Россия, политика, экономика';
 
-$hours = 1;
+if (empty($_POST['hours']))  $hours = 1;
+else $hours = $_POST['hours'];
 
 $table ='news';
 $table_link ='link';
