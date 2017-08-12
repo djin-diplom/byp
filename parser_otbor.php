@@ -82,7 +82,7 @@ if(empty($_POST['post_1'])) {
             $k++;
 
         }
-        if ($k == 6 ) break;
+        if ($k == 4 ) break;
     }
 
     ?>
