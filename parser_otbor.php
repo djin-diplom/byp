@@ -111,7 +111,7 @@ if(empty($_POST['post_1'])) {
         //    echo $_POST['img_'.$i].'<br><br><br>';
         //}
         if(!empty($_POST['checkbox_'.$k])) {
-            echo $_POST['checkbox_'.$k];
+            //echo $_POST['checkbox_'.$k];
             require('parser_tut_by_2.php');
             $i++;
         }
