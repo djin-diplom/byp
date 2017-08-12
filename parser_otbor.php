@@ -6,12 +6,12 @@ if(empty($_POST['post_1'])) {
         $LengthWord = 0;
 // Определяем позицию строки, до которой нужно все отрезать
         $pos = strpos($string, $StartWord);
-        if ($pos === false) return $string;
+        if ($pos === false) return '';
 //Отрезаем все, что идет до нужной нам позиции <item>
         $string = substr($string, $pos);
 // Точно таким же образом находим позицию конечной строки
         $pos = strpos($string, $EndWord);
-        if ($pos === false) return $string;
+        if ($pos === false) return '';
 // Отрезаем нужное количество символов от нулевого
         $string = substr($string, $LengthWord, $pos);
         $string = str_replace($StartWord, '', $string);//получили
@@ -113,7 +113,6 @@ if(empty($_POST['post_1'])) {
             $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
             $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
             $contentTitle = str_replace('FINANCE.', '',$contentTitle);
-            $contentTitle = str_replace('<![CDATA[', '',$contentTitle);
             $contentTitle = strip_tags($contentTitle, '<p>');
 
 
