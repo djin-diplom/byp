@@ -1,8 +1,8 @@
 ﻿<?php
 $url_mass_url[$i] = $_POST['link_'.$k];
 
-$temp_url = $url_mass_url[$i];
-$text_temp_2 = strip_tags(otbor_parse($temp_url, "article_body", "</div>"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
+$text_temp_2 = file_get_contents($url_mass_url[$i]);
+$text_temp_2 = strip_tags(otbor_parse($text_temp_2, "article_body", "</div>"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
 $pos_text = strpos($text_temp_2, '<p>');
                         $text_temp_2 = substr($text_temp_2, $pos_text);
                         $text_temp_2 = str_replace('px', '', $text_temp_2);
