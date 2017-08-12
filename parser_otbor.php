@@ -96,7 +96,7 @@ if(empty($_POST['post_1'])) {
             <?php
         endfor;
         ?>
-        <input type="hidden" name="post_1" value="0">
+        <input type="hidden" name="post_1" value="1">
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить данные"/>
     </form>
 
