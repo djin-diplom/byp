@@ -112,7 +112,6 @@ imagejpeg($image_smoll_sq, $filename2_sq, 10);
 
 
 }
-    $hours = $_POST['hours'];
     $hours = $hours + 6;
     ?>
     <form method="POST" enctype="multipart/form-data" action="<?php echo $main_name; ?>/<?php echo $name_parse; ?>">
