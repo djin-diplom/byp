@@ -1,5 +1,5 @@
 ﻿<?php
-$url_mass_url[$i] = $_POST['link_'.$i];
+$url_mass_url[$i] = $_POST['link_'.$k];
 
 $temp_url = $url_mass_url[$i];
 $text_temp_2 = strip_tags(otbor_parse($temp_url, "article_body", "</div>"), '<p><img><frame><figure><figcaption><h1><h2><h3><strong><table><tbody><tr><td>');
@@ -18,15 +18,15 @@ $pos_text = strpos($text_temp_2, '<p>');
 
 
 
-                        $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$_POST['title_'.$i]);
+                        $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$_POST['title_'.$k]);
                         $url_mass_titles[$i] = $contentTitle;
 
 
 
-                        $contentTitle = str_replace('&#x3C;','<',$_POST['description_'.$i]);
+                        $contentTitle = str_replace('&#x3C;','<',$_POST['description_'.$k]);
                         $contentTitle = str_replace('/&#x3E;','>',$contentTitle);
                         $contentTitle = str_replace('TUT.BY', 'BYPolit.org',$contentTitle);
                         $contentTitle = str_replace('FINANCE.', '',$contentTitle);
                         $url_mass_description[$i] = strip_tags($contentTitle, '<p>');
 
-                        $url_mass_img[$i] = $_POST['img_'.$i];
+                        $url_mass_img[$i] = $_POST['img_'.$k];

@@ -2,7 +2,7 @@
 
 $razdel = 'news_latest';
 
-echo $total_parse;
+//echo $total_parse;
 
 //print_r($all_count);
 //print_r($all_count_2);
