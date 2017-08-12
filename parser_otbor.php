@@ -7,6 +7,7 @@ if (empty($_POST['hours'])) {
         <input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить парсинг c задержкой (ввести интервал задержки в часах)"/>
     </form>
     <?php
+    exit;
 } else $hours = $_POST['hours'];
 
 $table ='news';
