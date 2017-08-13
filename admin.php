@@ -121,7 +121,7 @@ if (!empty($_POST['datetime_del'])){
 
 $delete = "DELETE FROM $Name_database.$table WHERE datetime = '$sel_2'";
 $res = mysqli_query($link, $delete);
-
+exit;
 }
 
 ?>
@@ -153,6 +153,7 @@ $res = mysqli_query($link, $select);
     $url_int = $row["url_int"];
     $teme_int = $row["teme_int"];
 	$post_vk = 0;
+	$text_re = 1;
 
 } else {
 	$datetime = date("Y-m-d H:i:s");
@@ -175,6 +176,7 @@ $res = mysqli_query($link, $select);
 	$url_int = '/news/';
 	$teme_int = 'Другие новости по этой теме.';
 	$post_vk = 1;
+	$text_re = 0;
 }
 ?>
 
@@ -217,3 +219,5 @@ echo '&lt;img_2img&gt;';?><br>
 		<input style="width:200px; height:50px; border: 1px solid #cccccc;" type="submit" value="Отправить статью"/>
 		<br><br>
 </form>
+
+<?php if($text_re == 1) exit; ?>
