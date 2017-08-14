@@ -32,7 +32,7 @@
 									<!-- VK Widget -->
 									<div id="vk_groups"></div>
 									<script type="text/javascript">
-										VK.Widgets.Group("vk_groups", {mode: 1}, 150640109);
+										VK.Widgets.Group("vk_groups", {mode: 3, width: "240"}, 150640109);
 									</script>
 								</li>
 							</ul>
@@ -75,8 +75,6 @@
 									}(document, 'script', 'facebook-jssdk'));</script>
 
 								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org" data-layout="button_count" data-size="large" data-show-faces="true">
-									<blockquote cite="https://www.facebook.com/BYPolit.org">
-										<a href=https://www.facebook.com/BYPolit.org">BYPolit.org</a></blockquote>
 								</div>
 
 							</li>
