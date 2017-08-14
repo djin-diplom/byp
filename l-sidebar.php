@@ -75,8 +75,9 @@
 									}(document, 'script', 'facebook-jssdk'));</script>
 
 								<div class="fb-page" data-href="https://www.facebook.com/BYPolit.org"
-									 data-width="240" data-height="220" data-small-header="false" data-adapt-container-width="true"
-									 data-hide-cover="false" data-show-facepile="true"></div>
+									 data-width="240" data-height="220"
+									 ><blockquote cite="https://www.facebook.com/BYPolit.org" >
+										<a href="https://www.facebook.com/BYPolit.org">BYPolit.org</a></blockquote></div>
 							</li>
 						</ul>
 
