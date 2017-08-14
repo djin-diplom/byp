@@ -36,22 +36,12 @@
 		<div class="owl-wrapper-outer">
 			<div class="owl-wrapper" style="width: 6496px; left: 0px; display: block;
 			    transition: all 800ms ease 0s; transform: translate3d(-928px, 0px, 0px);">
+
 				<div class="owl-item" style="width: 232px;">
 		            <div class="spons-item">
                         <img src="<?php echo $main_name; ?>/img/friend_4.jpg">
                     </div>
 		        </div>
-				<div class="owl-item" style="width: 232px;">
-					<div class="spons-item">
-						<img src="<?php echo $main_name; ?>/img/friend_5.jpg">
-					</div>
-				</div>
-				<div class="owl-item" style="width: 232px;">
-					<div class="spons-item">
-						<img src="<?php echo $main_name; ?>/img/friend_6.jpg">
-					</div>
-				</div>
-
 				<div class="owl-item" style="width: 232px;">
 				    <div class="spons-item">
                         <img src="<?php echo $main_name; ?>/img/friend_5.jpg">
