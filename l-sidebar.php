@@ -37,7 +37,7 @@
 								</li>
 							</ul>
 							<ul>
-								<li><a class="twitter-timeline" href="https://twitter.com/BYPolit"  width="240" height="700"
+								<li width="240"><a class="twitter-timeline" href="https://twitter.com/BYPolit"   width="240" height="700"
 									   data-chrome="nofooter" lang="ru">Tweets by BYPolit</a>
 									<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</li>
