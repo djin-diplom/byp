@@ -31,8 +31,6 @@ if ($route) {//Переключатель заголовков
 <meta name="twitter:description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" />
 <meta property="og:url" content="<?php echo $main_name; ?><?php echo $url_og; ?>" />
 <meta name="twitter:image:src" content="<?php echo $main_name; ?><?php echo $url_og_picture; ?>" />
-<meta property="twitter:image:width" content="299" />
-<meta property="twitter:image:height" content="249" />
 
 
 	<meta name="description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" >
