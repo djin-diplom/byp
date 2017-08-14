@@ -48,11 +48,6 @@
 					</div>
 				</div>
 				<div class="owl-item" style="width: 232px;">
-					<div class="spons-item">
-						<img src="<?php echo $main_name; ?>/img/friend_4.jpg">
-					</div>
-				</div>
-				<div class="owl-item" style="width: 232px;">
 		            <div class="spons-item">
                         <img src="<?php echo $main_name; ?>/img/friend_4.jpg">
                     </div>
