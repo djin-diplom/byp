@@ -70,13 +70,13 @@
 										var js, fjs = d.getElementsByTagName(s)[0];
 										if (d.getElementById(id)) return;
 										js = d.createElement(s); js.id = id;
-										js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+										js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=200459681245";
 										fjs.parentNode.insertBefore(js, fjs);
 									}(document, 'script', 'facebook-jssdk'));</script>
 
 								<div class="fb-page" data-href="https://www.facebook.com/BYPolit.org"
-									 data-width="240" data-height="220"
-									 ><blockquote cite="https://www.facebook.com/BYPolit.org" >
+									 data-width="240" data-height="220" data-adapt-container-width="true"
+									 ><blockquote cite="https://www.facebook.com/BYPolit.org" class="fb-xfbml-parse-ignore">
 										<a href="https://www.facebook.com/BYPolit.org">BYPolit.org</a></blockquote></div>
 							</li>
 						</ul>
