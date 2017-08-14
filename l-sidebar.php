@@ -74,11 +74,11 @@
 										fjs.parentNode.insertBefore(js, fjs);
 									}(document, 'script', 'facebook-jssdk'));</script>
 
-								
-								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org"
-									 data-width="240" data-height="220" data-small-header="false" data-adapt-container-width="true"
-									 data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BYPolit.org">
-										<a href=https://www.facebook.com/BYPolit.org">BYPolit.org</a></blockquote></div>
+								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org" data-layout="button_count" data-size="large" data-show-faces="true">
+									<blockquote cite="https://www.facebook.com/BYPolit.org">
+										<a href=https://www.facebook.com/BYPolit.org">BYPolit.org</a></blockquote>
+								</div>
+
 							</li>
 						</ul>
 
