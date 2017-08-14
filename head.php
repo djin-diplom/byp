@@ -29,11 +29,12 @@ if ($route) {//Переключатель заголовков
 <meta name="twitter:site" content="@BYPolit.org"/>
 <meta name="twitter:title" content="<?php echo $site_name; ?> :: <?php echo $title; ?>" />
 <meta name="twitter:description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" />
-<meta property="og:url" content="<?php echo $site_name; ?><?php echo $url_og; ?>" />
+<meta property="og:url" content="<?php echo $main_name; ?><?php echo $url_og; ?>" />
 <meta name="twitter:image:src" content="<?php echo $main_name; ?><?php echo $url_og_picture; ?>" />
+<meta property="twitter:image:width" content="299" />
+<meta property="twitter:image:height" content="249" />
 
 
-<meta property="og:image" content="http://img.vz.ru/upimg/soc/soc_882125.jpg"/>
 	<meta name="description" content="<?php echo $site_name; ?> :: <?php echo $description ?>" >
 	<meta name="keywords" content="<?php echo $site_name; ?> :: <?php echo $keys; ?>">
 <meta property="og:type" content="website" />
