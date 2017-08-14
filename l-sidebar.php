@@ -32,12 +32,12 @@
 									<!-- VK Widget -->
 									<div id="vk_groups"></div>
 									<script type="text/javascript">
-										VK.Widgets.Group("vk_groups", {mode: 1}, 150640109);
+										VK.Widgets.Group("vk_groups", {mode: 3, width: "240"}, 150640109);
 									</script>
 								</li>
 							</ul>
 							<ul>
-								<li width="240"><a class="twitter-timeline" href="https://twitter.com/BYPolit"   width="240" height="700"
+								<li><a class="twitter-timeline" href="https://twitter.com/BYPolit"   width="240" height="700"
 									   data-chrome="nofooter" lang="ru">Tweets by BYPolit</a>
 									<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</li>
@@ -66,7 +66,10 @@
 						<ul>
 							<li>
 
-								<div class="fb-follow" data-href="https://www.facebook.com/BYPolit.org" data-layout="button_count" data-size="large" data-show-faces="true"></div>
+								<div class="fb-page" data-href="https://www.facebook.com/BYPolit.org"
+									 data-width="240" data-height="220" data-small-header="false" data-adapt-container-width="true"
+									 data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BYPolit.org" class="fb-xfbml-parse-ignore">
+										<a href="https://www.facebook.com/BYPolit.org">BYPolit.org</a></blockquote></div>
 							</li>
 						</ul>
 
