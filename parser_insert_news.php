@@ -15,7 +15,7 @@ print_r($url_mass_titles);
 
 for($k = 0; $k < $total_parse; $k++) {
 
-$datetime = date("Y-m-d H:i:s",strtotime("+".(($k+1+$hours)*15)." minutes"));
+$datetime = date("Y-m-d H:i:s",strtotime("+".(($k+1+$hours)*30)." minutes"));
    // echo $datetime.'<br>         ';
 $id = time()+($k);
    // echo $id.'<br>         ';
