@@ -13,12 +13,9 @@ $i = 0;
 	$row = mysqli_fetch_array($res);
 $route = false;
 if (empty($row)) {
-	switch($rubrika){
-		case 'news':
-		case 'searchnews':
-		case 'topic':
-		case 'news':
-		case 'pastnews':
+	switch($REQUEST_URI){
+		case '/news':
+		case '/':
 			break;
 		default:
 			header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);

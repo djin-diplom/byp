@@ -1,7 +1,11 @@
+Redirect 301 https://bypolit.org/ https://bypolit.org/news
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
+
+
 
 # Return 404
 ErrorDocument 404 https://bypolit.org/error.php
