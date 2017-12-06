@@ -138,7 +138,9 @@ switch($rubrika){
 	else $keys = $keys_value;
 	break;
 	
-	case 'news': $rubrika = 'pastnews';
+	case 'news':
+	case '':
+		$rubrika = 'pastnews';
 	$keys_value = 'empty';
 	$keys = '';
 	$nomer_url = $number_of_pages;
