@@ -4,5 +4,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule .* index.php [L]
 
 # Return 404
-ErrorDocument 404 https://bypolit.org/news/empty/10
+ErrorDocument 404 /error.php
 DirectoryIndex index.php
