@@ -2,6 +2,10 @@
 
 $REQUEST_URI = $_SERVER['REQUEST_URI'];
 
+$nomer_url_mass = explode ( '/', $REQUEST_URI);
+
+$rubrika = $nomer_url_mass[1];
+
 $select = "SELECT * FROM $Name_database.$table WHERE url = '$REQUEST_URI' ";
 $res = mysqli_query($link, $select);
 
@@ -9,7 +13,18 @@ $i = 0;
 	$row = mysqli_fetch_array($res);
 $route = false;
 if (empty($row)) {
-	header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
+	switch($rubrika){
+		case '':
+		case 'news':
+		case 'searchnews':
+		case 'topic':
+		case 'news':
+		case 'pastnews':
+			break;
+		default:
+			header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
+			break;
+	}
 	$route = true;
 } else {
 	$page['datetime'] = $row['datetime'];
@@ -34,9 +49,7 @@ $admin = false;
 //if ($REQUEST_URI == '/admin/622118') $admin = true;
 
 
-$nomer_url_mass = explode ( '/', $REQUEST_URI);
 
-$rubrika = $nomer_url_mass[1];
 
 if (!empty($nomer_url_mass[2])) $news_year = $nomer_url_mass[2];
 else $news_year = '2017-0';
