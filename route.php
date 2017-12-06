@@ -144,8 +144,8 @@ switch($rubrika){
 	$nomer_url = $number_of_pages;
 	break;
 
-        //default: header('Location: '.$main_name.'/news/');
-        //break;
+        default: header('Location: '.$main_name.'/error.html');
+        break;
 }
 $nomer_url_2 = $nomer_url - $number_of_pages;
 $nomer_url_3 = $nomer_url + $number_of_pages;
