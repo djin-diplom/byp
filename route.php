@@ -144,7 +144,9 @@ switch($rubrika){
 	$nomer_url = $number_of_pages;
 	break;
 
-        default: header('Location: '.$main_name.'/error.html');
+        default: //header('Location: '.$main_name.'/news/');
+		header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
+		exit();
         break;
 }
 $nomer_url_2 = $nomer_url - $number_of_pages;
