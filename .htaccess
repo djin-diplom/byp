@@ -1,4 +1,4 @@
-Redirect 301 https://bypolit.org/ https://bypolit.org/news
+Redirect 301 /news https://bypolit.org
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
