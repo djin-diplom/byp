@@ -7,8 +7,9 @@ $res = mysqli_query($link, $select);
 
 $i = 0;
 	$row = mysqli_fetch_array($res);
-$route = false;	
+$route = false;
 if (empty($row)) {
+	header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
 	$route = true;
 } else {
 	$page['datetime'] = $row['datetime'];
@@ -145,7 +146,7 @@ switch($rubrika){
 	$nomer_url = $number_of_pages;
 	break;
 
-        default: //header('Location: '.$main_name.'/news/');
+        default:
 		header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
 			$rubrika = 'pastnews';
 			$keys_value = 'empty';
