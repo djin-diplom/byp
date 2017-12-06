@@ -14,7 +14,7 @@ $i = 0;
 $route = false;
 if (empty($row)) {
 	switch($REQUEST_URI){
-		case '/news':
+		case '/news/':
 		case '/':
 			break;
 		default:
