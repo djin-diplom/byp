@@ -148,8 +148,10 @@ switch($rubrika){
 
         default: //header('Location: '.$main_name.'/news/');
 		header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
-		include "error.php";
-		exit();
+			$rubrika = 'pastnews';
+			$keys_value = 'empty';
+			$keys = '';
+			$nomer_url = $number_of_pages;
         break;
 }
 $nomer_url_2 = $nomer_url - $number_of_pages;
