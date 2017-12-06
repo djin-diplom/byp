@@ -139,7 +139,6 @@ switch($rubrika){
 	break;
 	
 	case 'news':
-	case '':
 		$rubrika = 'pastnews';
 	$keys_value = 'empty';
 	$keys = '';
