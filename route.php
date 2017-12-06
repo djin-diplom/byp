@@ -14,7 +14,6 @@ $i = 0;
 $route = false;
 if (empty($row)) {
 	switch($rubrika){
-		case '':
 		case 'news':
 		case 'searchnews':
 		case 'topic':
